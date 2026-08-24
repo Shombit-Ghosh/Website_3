@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Born to Fit | Luxury Strength & Personal Training in Gouranganagar, Kolkata</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            teko: ['Teko', 'sans-serif'],
+            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              creme: '#FAF7F2',       /* Primary Warm White/Creme Canvas */
+              cremeCard: '#FFFFFF',   /* Pure White Surfaces */
+              cremeDark: '#F2ECE1',   /* Soft Linen/Khaki Shade */
+              cremeBorder: '#E5DCCF', /* Gentle Luxury Contour Lines */
+              ink: '#121214',         /* Deep Pitch Black */
+              inkMuted: '#575760',    /* Refined Charcoal Grey */
+              inkLight: '#8C8C96',    /* Soft Subtle Grey */
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FAF7F2; }
+    ::-webkit-scrollbar-thumb { background: #E5DCCF; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #121214; }
+
+    /* Classy Contour Dot Matrix & Line Patterns */
+    .contour-creme-bg {
+      background-image: radial-gradient(rgba(18, 18, 20, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .contour-light-lines {
+      background: radial-gradient(ellipse 70% 40% at 50% -10%, rgba(242, 236, 225, 0.9), transparent 70%);
+    }
+
+    /* Minimalist Slider */
+    input[type=range]::-webkit-slider-thumb {
+      background-color: #121214;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-creme text-brand-ink font-jakarta selection:bg-brand-ink selection:text-brand-creme antialiased contour-creme-bg">
+
+  <!-- Left Drawer Navigation -->
+  <div id="drawerOverlay" onclick="toggleDrawer()" class="fixed inset-0 bg-brand-ink/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <aside id="navDrawer" class="fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-brand-creme border-r border-brand-cremeBorder z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-brand-cremeBorder">
+        <a href="#" class="flex items-center gap-2.5">
+          <span class="w-2 h-6 bg-brand-ink inline-block"></span>
+          <span class="font-teko text-3xl tracking-widest text-brand-ink uppercase">Born to <span class="font-light text-brand-inkMuted">Fit</span></span>
+        </a>
+        <button onclick="toggleDrawer()" class="w-8 h-8 rounded bg-brand-cremeDark border border-brand-cremeBorder text-brand-ink hover:bg-brand-ink hover:text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-1 mt-6 font-semibold text-xs uppercase tracking-widest text-brand-inkMuted">
+        <a href="#coach" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-user-ninja text-brand-ink w-5 text-center"></i> Coach Suman
+        </a>
+        <a href="#timeline-forecaster" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder text-brand-ink font-bold">
+          <i class="fa-solid fa-clock-rotate-left text-brand-ink w-5 text-center"></i> Goal Forecaster
+        </a>
+        <a href="#nutri-calc" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-calculator text-brand-ink w-5 text-center"></i> Body Metrics & Macros
+        </a>
+        <a href="#strength-lab" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-dumbbell text-brand-ink w-5 text-center"></i> 1RM Plate Math
+        </a>
+        <a href="#workout-matrix" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-list-check text-brand-ink w-5 text-center"></i> Workout Vault & Timer
+        </a>
+        <a href="#diet-swap" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-utensils text-brand-ink w-5 text-center"></i> Kolkata Meal Swaps
+        </a>
+        <a href="#plans" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-gem text-brand-ink w-5 text-center"></i> Membership Tiers
+        </a>
+        <a href="#contact" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-location-dot text-brand-ink w-5 text-center"></i> Gouranganagar Gym
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-brand-cremeBorder space-y-3">
+      <div class="text-[11px] text-brand-inkMuted font-medium">
+        <i class="fa-solid fa-comment-dots text-brand-ink mr-1"></i> Direct Inquiries
+      </div>
+      <a href="https://wa.me/919876543210?text=Hi%20Coach%20Suman,%20I%20want%20to%20inquire%20about%20Born%20to%20Fit%20Gouranganagar" target="_blank" class="w-full bg-brand-ink text-white text-xs font-bold uppercase tracking-wider py-3 rounded flex items-center justify-center gap-2 hover:bg-black transition shadow-md">
+        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Coach Suman
+      </a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="fixed w-full top-0 z-40 bg-brand-creme/90 backdrop-blur-md border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Hamburger & Logo -->
+      <div class="flex items-center gap-4 sm:gap-5">
+        <button onclick="toggleDrawer()" aria-label="Open Navigation Menu" class="w-10 h-10 rounded border border-brand-cremeBorder hover:border-brand-ink bg-brand-cremeCard flex flex-col items-center justify-center gap-1 transition group shadow-sm">
+          <span class="w-4 h-[1.5px] bg-brand-ink group-hover:w-5 transition-all"></span>
+          <span class="w-4 h-[1.5px] bg-brand-inkMuted group-hover:w-5 transition-all"></span>
+          <span class="w-4 h-[1.5px] bg-brand-ink group-hover:w-5 transition-all"></span>
+        </button>
+
+        <a href="#" class="flex items-center gap-2.5">
+          <span class="w-2 h-7 bg-brand-ink inline-block"></span>
+          <span class="font-teko text-3xl tracking-widest text-brand-ink uppercase">Born to <span class="font-light text-brand-inkMuted">Fit</span></span>
+        </a>
+      </div>
+
+      <!-- Live Status & Join CTA -->
+      <div class="flex items-center gap-3">
+        <div id="liveStatusPill" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-cremeBorder text-[11px] font-bold tracking-wider bg-brand-cremeCard shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span id="liveStatusText" class="text-brand-ink">Checking Hours...</span>
+        </div>
+
+        <button onclick="openModal('Direct Enrollment')" class="bg-brand-ink hover:bg-black text-brand-creme text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded transition shadow-md transform hover:scale-[1.02]">
+          Enroll
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-24 overflow-hidden border-b border-brand-cremeBorder contour-light-lines">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10 py-16">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-cremeBorder text-brand-ink text-xs uppercase tracking-widest bg-brand-cremeCard font-semibold shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-brand-ink"></span> Gouranganagar, Kolkata
+        </div>
+        
+        <h1 class="font-teko text-6xl sm:text-8xl font-bold uppercase leading-[0.88] text-brand-ink tracking-wide">
+          Pure Discipline. <br/><span class="text-brand-inkMuted font-light">Sculpted By Science.</span>
+        </h1>
+        
+        <p class="text-brand-inkMuted text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+          Kolkata’s bespoke strength and conditioning studio. Elevate your physique under the direct guidance of <strong>Coach Suman</strong> with evidence-based biomechanics and custom metabolic macro distribution.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#timeline-forecaster" class="bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest px-7 py-4 rounded transition flex items-center gap-3 shadow-md">
+            <i class="fa-solid fa-calendar-days"></i> Forecast Goal Timeline
+          </a>
+          <button onclick="openModal('Free 1-on-1 Fitness Assessment')" class="border border-brand-cremeBorder hover:border-brand-ink text-brand-ink text-xs font-bold uppercase tracking-widest px-7 py-4 rounded transition bg-brand-cremeCard shadow-sm">
+            Book 1-on-1 Assessment
+          </button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-brand-cremeBorder max-w-lg">
+          <div>
+            <div class="font-teko text-4xl text-brand-ink font-bold tracking-wide">500+</div>
+            <div class="text-[10px] text-brand-inkMuted uppercase tracking-widest font-bold">Active Members</div>
+          </div>
+          <div>
+            <div class="font-teko text-4xl text-brand-ink font-bold tracking-wide">1-on-1</div>
+            <div class="text-[10px] text-brand-inkMuted uppercase tracking-widest font-bold">Coach Suman PT</div>
+          </div>
+          <div>
+            <div class="font-teko text-4xl text-brand-ink font-bold tracking-wide">100%</div>
+            <div class="text-[10px] text-brand-inkMuted uppercase tracking-widest font-bold">Scientific Focus</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="relative w-full max-w-md aspect-[4/5] bg-brand-cremeCard rounded-2xl p-2 border border-brand-cremeBorder overflow-hidden group shadow-xl">
+          <img 
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" 
+            alt="Born to Fit Gym Kolkata" 
+            class="w-full h-full object-cover rounded-xl transition duration-700 group-hover:scale-105 filter grayscale contrast-125 brightness-95"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-5 inset-x-5 p-4 rounded-xl bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-md shadow-lg">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeDark flex items-center justify-center text-brand-ink">
+                <i class="fa-solid fa-award text-xs"></i>
+              </div>
+              <div>
+                <p class="text-[10px] text-brand-inkMuted font-bold uppercase tracking-widest">Gouranganagar, Kolkata</p>
+                <p class="text-brand-ink text-xs font-semibold">Olympic Free-Weights & Bespoke Conditioning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Goal Timeline Forecaster -->
+  <section id="timeline-forecaster" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Interactive Forecaster</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Days Required to Reach Target</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Calculate the projected timeframe required to meet your body transformation metrics based on Coach Suman's protocols.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between text-xs uppercase font-bold text-brand-inkMuted mb-2">
+                <span>Current Body Weight</span>
+                <span class="text-brand-ink font-bold text-sm" id="currWeightDisplay">75 kg</span>
+              </div>
+              <input type="range" id="currWeight" min="40" max="150" value="75" step="0.5" class="w-full accent-brand-ink" oninput="updateForecaster()" />
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs uppercase font-bold text-brand-inkMuted mb-2">
+                <span>Target Body Weight</span>
+                <span class="text-brand-ink font-bold text-sm" id="targetWeightDisplay">68 kg</span>
+              </div>
+              <input type="range" id="targetWeight" min="40" max="150" value="68" step="0.5" class="w-full accent-brand-ink" oninput="updateForecaster()" />
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Weekly Training Frequency</label>
+              <select id="workoutDays" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" onchange="updateForecaster()">
+                <option value="3">3 Days / Week (Foundation)</option>
+                <option value="4">4 Days / Week (Upper-Lower Split)</option>
+                <option value="5" selected>5 Days / Week (Push-Pull-Legs)</option>
+                <option value="6">6 Days / Week (Athlete Conditioning)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Commitment Protocol</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="setDiscipline('moderate', this)" class="disc-btn py-2 text-xs uppercase font-bold rounded border border-brand-cremeBorder bg-brand-creme text-brand-inkMuted hover:border-brand-ink transition">Moderate</button>
+                <button type="button" onclick="setDiscipline('strict', this)" class="disc-btn py-2 text-xs uppercase font-bold rounded border border-brand-ink bg-brand-ink text-brand-creme transition">Strict (1-on-1)</button>
+                <button type="button" onclick="setDiscipline('extreme', this)" class="disc-btn py-2 text-xs uppercase font-bold rounded border border-brand-cremeBorder bg-brand-creme text-brand-inkMuted hover:border-brand-ink transition">Aggressive</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 border border-brand-cremeBorder rounded-xl p-6 flex flex-col justify-between text-center relative overflow-hidden">
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-inkMuted">Projected Duration</span>
+              <div class="font-teko text-7xl font-bold text-brand-ink leading-none mt-2" id="daysNeededDisplay">98</div>
+              <div class="text-xs font-bold uppercase tracking-wider text-brand-ink" id="weeksDisplay">~ 14 Weeks</div>
+              <div class="text-xs text-brand-inkMuted mt-1">Projected Target Date: <strong class="text-brand-ink" id="projectedDate">--</strong></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 pt-6 border-t border-brand-cremeBorder text-left">
+              <div class="p-3 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
+                <span class="text-[10px] text-brand-inkMuted uppercase font-bold block">Weight Delta</span>
+                <span class="font-teko text-2xl text-brand-ink font-bold" id="deltaDisplay">-7.0 kg</span>
+              </div>
+              <div class="p-3 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
+                <span class="text-[10px] text-brand-inkMuted uppercase font-bold block">Pace / Week</span>
+                <span class="font-teko text-2xl text-brand-ink font-bold" id="paceDisplay">0.5 kg / wk</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('Custom Timeline Program')" class="mt-4 w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded transition shadow-md">
+              Lock In Timeline with Coach
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Nutrition Hub -->
+  <section id="nutri-calc" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Physiology Analysis</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Body Composition & Macro Engine</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Calculate daily hydration and protein targets calibrated to your athletic focus.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
+        <form id="healthEngineForm" class="grid sm:grid-cols-3 gap-6" onsubmit="calculateHealthMetrics(event)">
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Height (in cm)</label>
+            <input type="number" id="userHeight" placeholder="e.g. 175" min="100" max="250" value="175" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Weight (in kg)</label>
+            <input type="number" id="userWeight" placeholder="e.g. 74" min="30" max="250" step="0.5" value="74" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Fitness Objective</label>
+            <select id="userGoal" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition">
+              <option value="fatloss">Fat Loss & Conditioning</option>
+              <option value="maintenance">Maintenance & Longevity</option>
+              <option value="hypertrophy" selected>Hypertrophy (Muscle Gain)</option>
+              <option value="athlete">Athletic Performance</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-3">
+            <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase tracking-widest py-4 rounded-lg transition shadow-md">
+              Generate Comprehensive Profile
+            </button>
+          </div>
+        </form>
+
+        <div id="resultsDashboard" class="mt-10 pt-8 border-t border-brand-cremeBorder grid md:grid-cols-3 gap-6 hidden">
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Body Mass Index</div>
+            <div id="resBMI" class="font-teko text-5xl font-bold text-brand-ink mt-1">--</div>
+            <div id="resBMICat" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">--</div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Daily Water Intake</div>
+            <div id="resWater" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">L</span></div>
+            <div id="resGlasses" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">~-- Glasses</div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-egg"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Target Protein</div>
+            <div id="resProtein" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">g</span></div>
+            <div id="resProteinRange" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">Daily Target</div>
+          </div>
+        </div>
+
+        <div id="coachRecommendation" class="mt-6 p-4 rounded-xl bg-brand-cremeDark border border-brand-cremeBorder hidden items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-circle-info text-brand-ink text-base"></i>
+            <p class="text-xs text-brand-ink font-medium" id="coachAdviceText">Loading guidance...</p>
+          </div>
+          <button onclick="openModal('Nutrition Consultation')" class="text-xs uppercase font-bold text-brand-ink hover:underline shrink-0">
+            Request Meal Sheet &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Strength Lab (1RM & Plate Math) -->
+  <section id="strength-lab" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Power Dynamics</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">1-Rep Max & Barbell Plate Distribution</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Estimate one-rep limits and get the exact Olympic plate arrangement for each sleeve.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Lifted Weight (kg)</label>
+              <input type="number" id="liftWeight" value="80" min="20" max="400" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" oninput="calculate1RM()" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Repetitions Performed (1-12)</label>
+              <input type="number" id="liftReps" value="6" min="1" max="12" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" oninput="calculate1RM()" />
+            </div>
+            <div class="p-4 bg-brand-creme rounded-xl border border-brand-cremeBorder">
+              <div class="text-[10px] uppercase font-bold text-brand-inkMuted tracking-wider">Plates Per Side (20kg Bar)</div>
+              <div id="plateMathDisplay" class="text-sm font-semibold text-brand-ink mt-1">1x 20kg, 1x 10kg</div>
+            </div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 border border-brand-cremeBorder rounded-xl p-6 text-center space-y-4">
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted tracking-widest">Estimated 1-Rep Max</span>
+            <div id="oneRepMaxDisplay" class="font-teko text-7xl font-bold text-brand-ink leading-none">96 kg</div>
+            
+            <div class="grid grid-cols-3 gap-2 pt-4 border-t border-brand-cremeBorder text-xs">
+              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
+                <span class="text-brand-inkMuted block font-bold text-[10px]">90% Max</span>
+                <span id="p90" class="text-brand-ink font-bold text-sm">86 kg</span>
+              </div>
+              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
+                <span class="text-brand-inkMuted block font-bold text-[10px]">80% Hyper</span>
+                <span id="p80" class="text-brand-ink font-bold text-sm">77 kg</span>
+              </div>
+              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
+                <span class="text-brand-inkMuted block font-bold text-[10px]">70% Volume</span>
+                <span id="p70" class="text-brand-ink font-bold text-sm">67 kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Workout Routine Matrix & Rest Timer -->
+  <section id="workout-matrix" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Structured Splits</span>
+            <h2 class="font-teko text-5xl text-brand-ink uppercase">Coach Suman's Training Vault</h2>
+            <p class="text-brand-inkMuted text-sm font-normal">Explore the exact workout structures implemented at Born to Fit.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <button onclick="renderRoutine('push')" id="tab-push" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-ink text-brand-creme">Push (Chest/Shoulders/Triceps)</button>
+            <button onclick="renderRoutine('pull')" id="tab-pull" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted">Pull (Back/Biceps)</button>
+            <button onclick="renderRoutine('legs')" id="tab-legs" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted">Legs & Core</button>
+          </div>
+
+          <div id="routineDisplay" class="space-y-3 pt-2"></div>
+        </div>
+
+        <div class="lg:col-span-5 bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="text-center space-y-2">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-inkMuted">Interval Tool</span>
+            <h3 class="font-teko text-4xl text-brand-ink uppercase">Precision Rest Timer</h3>
+          </div>
+
+          <div class="my-8 text-center">
+            <div id="timerDisplay" class="font-teko text-8xl font-bold text-brand-ink tracking-wider">01:00</div>
+            <div id="timerStatus" class="text-[11px] font-bold uppercase tracking-widest text-brand-inkMuted mt-1">Ready</div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 mb-6">
+            <button onclick="setRestTime(30)" class="time-preset py-2 rounded-lg bg-brand-creme border border-brand-cremeBorder text-xs font-bold hover:border-brand-ink text-brand-inkMuted">30s (Pump)</button>
+            <button onclick="setRestTime(60)" class="time-preset py-2 rounded-lg bg-brand-ink text-xs font-bold text-brand-creme">60s (Hyper)</button>
+            <button onclick="setRestTime(90)" class="time-preset py-2 rounded-lg bg-brand-creme border border-brand-cremeBorder text-xs font-bold hover:border-brand-ink text-brand-inkMuted">90s (Heavy)</button>
+          </div>
+
+          <div class="flex gap-3">
+            <button id="startTimerBtn" onclick="toggleTimer()" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md">
+              <i class="fa-solid fa-play mr-1"></i> Start Rest
+            </button>
+            <button onclick="resetTimer()" class="px-5 border border-brand-cremeBorder hover:bg-brand-creme text-brand-ink font-bold uppercase text-xs rounded-lg transition">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Bengali Meal Matrix -->
+  <section id="diet-swap" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Nutrition Matrix</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Bengali Macro Meal Replacements</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Calibrated food choices sourced directly from local markets around Gouranganagar.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="flex justify-center gap-4 mb-8">
+          <button id="btnNonVeg" onclick="switchDietTab('nonveg')" class="px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md">
+            Non-Veg (Fish / Poultry / Eggs)
+          </button>
+          <button id="btnVeg" onclick="switchDietTab('veg')" class="px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition">
+            Vegetarian (Sattu / Paneer)
+          </button>
+        </div>
+
+        <div id="dietGrid" class="grid sm:grid-cols-3 gap-6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach Suman Spotlight -->
+  <section id="coach" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-brand-cremeBorder group shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" 
+              alt="Head Coach Mr. Suman" 
+              class="w-full aspect-[3/4] object-cover filter grayscale contrast-125 group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-ink via-brand-ink/80 to-transparent p-6">
+              <span class="px-2.5 py-1 bg-brand-creme text-brand-ink text-[10px] font-bold uppercase tracking-widest rounded">Master Coach</span>
+              <h3 class="font-teko text-4xl text-white mt-2 tracking-wide uppercase">Mr. Suman</h3>
+              <p class="text-xs text-brand-creme/80">Head of Strength & Conditioning</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Personal Mentorship</span>
+          <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase leading-none">
+            Precision Biomechanics. <br/><span class="text-brand-inkMuted font-light">Tangible Progress.</span>
+          </h2>
+          <p class="text-brand-inkMuted text-sm sm:text-base font-normal leading-relaxed">
+            Under <strong>Mr. Suman's</strong> direct coaching, programming is calibrated specifically to your body proportions, joint health, and metabolic recovery rate. No generic charts—only disciplined execution.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder shadow-sm">
+              <div class="text-brand-ink font-bold text-sm mb-1"><i class="fa-solid fa-person-running mr-2 text-brand-inkMuted"></i>Form & Joint Alignment</div>
+              <p class="text-xs text-brand-inkMuted">Lifting schemes tailored around skeletal leverage to avoid joint strain.</p>
+            </div>
+            <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder shadow-sm">
+              <div class="text-brand-ink font-bold text-sm mb-1"><i class="fa-solid fa-chart-simple mr-2 text-brand-inkMuted"></i>Weekly Body Audits</div>
+              <p class="text-xs text-brand-inkMuted">Caliper measurements and progressive load adjustments every week.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="openModal('1-on-1 PT with Coach Suman')" class="bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest px-6 py-3.5 rounded transition shadow-md">
+              Apply For Mentorship
+            </button>
+            <a href="https://wa.me/919876543210?text=Hi%20Coach%20Suman,%20I%20want%20to%20inquire%20about%20Born%20to%20Fit%20Gouranganagar" target="_blank" class="border border-brand-cremeBorder hover:border-brand-ink bg-brand-cremeCard text-brand-ink font-bold uppercase text-xs tracking-widest px-6 py-3.5 rounded transition flex items-center gap-2 shadow-sm">
+              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Coach
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section id="plans" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Membership Tiers</span>
+        <h2 class="font-teko text-5xl text-brand-ink uppercase">Investment In Strength</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Monthly -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-8 flex flex-col justify-between hover:border-brand-ink transition shadow-lg">
+          <div class="space-y-4">
+            <h3 class="font-teko text-3xl text-brand-ink uppercase">Monthly Access</h3>
+            <div class="font-teko text-5xl font-bold text-brand-ink">₹1,200<span class="text-sm text-brand-inkMuted font-jakarta"> / mo</span></div>
+            <ul class="text-sm text-brand-inkMuted space-y-2.5 pt-4">
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Full floor & free-weight access</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Locker & shower usage</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Baseline routine guide</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Monthly Plan - ₹1,200')" class="mt-8 w-full border border-brand-cremeBorder hover:bg-brand-ink hover:text-brand-creme hover:border-brand-ink text-brand-ink font-bold uppercase tracking-widest py-3 rounded-lg transition text-xs shadow-sm">
+            Select Monthly
+          </button>
+        </div>
+
+        <!-- Featured 1-on-1 -->
+        <div class="bg-brand-cremeCard border-2 border-brand-ink rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl transform md:-translate-y-2">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase rounded-full tracking-widest shadow-md">
+            Recommended
+          </div>
+          <div class="space-y-4">
+            <h3 class="font-teko text-3xl text-brand-ink uppercase">Coach Suman 1-on-1 PT</h3>
+            <div class="font-teko text-5xl font-bold text-brand-ink">Custom<span class="text-sm text-brand-inkMuted font-jakarta"> / Goal</span></div>
+            <ul class="text-sm text-brand-ink space-y-2.5 pt-4 font-medium">
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> <strong>Daily 1-on-1 supervision</strong></li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Custom calorie & macro distribution</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Strict biomechanics & form audit</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Weekly body-fat & caliper tracking</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Coach Suman 1-on-1 Mentorship')" class="mt-8 w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase tracking-widest py-3.5 rounded-lg transition text-xs shadow-md">
+            Reserve Mentorship
+          </button>
+        </div>
+
+        <!-- Annual -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-8 flex flex-col justify-between hover:border-brand-ink transition shadow-lg">
+          <div class="space-y-4">
+            <h3 class="font-teko text-3xl text-brand-ink uppercase">Annual Tier</h3>
+            <div class="font-teko text-5xl font-bold text-brand-ink">₹10,500<span class="text-sm text-brand-inkMuted font-jakarta"> / yr</span></div>
+            <ul class="text-sm text-brand-inkMuted space-y-2.5 pt-4">
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Comprehensive annual pass</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> 2 Free personal assessment slots</li>
+              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Dedicated locker space</li>
+            </ul>
+          </div>
+          <button onclick="openModal('Annual Plan - ₹10,500')" class="mt-8 w-full border border-brand-cremeBorder hover:bg-brand-ink hover:text-brand-creme hover:border-brand-ink text-brand-ink font-bold uppercase tracking-widest py-3 rounded-lg transition text-xs shadow-sm">
+            Select Annual
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="contact" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Gym Location</span>
+          <h2 class="font-teko text-5xl text-brand-ink uppercase">Born to Fit Gouranganagar</h2>
+          <p class="text-brand-inkMuted text-sm font-normal leading-relaxed">
+            Conveniently situated in Gouranganagar, easily accessible from Baguiati, Rajarhat, and New Town. Visit the gym to tour the equipment and meet Coach Suman.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-brand-cremeCard border border-brand-cremeBorder flex items-center justify-center text-brand-ink shrink-0 shadow-sm">
+                <i class="fa-solid fa-map-pin text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-brand-ink text-sm">Address</h4>
+                <p class="text-brand-inkMuted text-xs mt-0.5">Gouranganagar Main Road, Kolkata, West Bengal - 700159</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-brand-cremeCard border border-brand-cremeBorder flex items-center justify-center text-brand-ink shrink-0 shadow-sm">
+                <i class="fa-solid fa-clock text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-brand-ink text-sm">Operating Timings</h4>
+                <p class="text-brand-inkMuted text-xs mt-0.5">Mon – Sat: 6:00 AM – 10:00 PM | Sun: 7:00 AM – 1:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-80 rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard flex items-center justify-center p-6 text-center shadow-xl">
+          <div class="space-y-3">
+            <i class="fa-solid fa-compass text-4xl text-brand-inkMuted"></i>
+            <h4 class="font-bold text-brand-ink text-lg">Gouranganagar Main Branch</h4>
+            <p class="text-xs text-brand-inkMuted max-w-xs mx-auto">Equipped with dedicated parking spaces.</p>
+            <a href="https://maps.google.com/?q=Gouranganagar+Kolkata" target="_blank" class="inline-block bg-brand-ink hover:bg-black text-brand-creme text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-lg transition shadow-md">
+              Open Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-brand-inkMuted bg-brand-cremeDark/80">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>&copy; Born to Fit. All rights reserved. Gouranganagar, Kolkata - 700159.</p>
+      <p>Head Coach: Mr. Suman</p>
+    </div>
+  </footer>
+
+  <!-- Enrollment Modal -->
+  <div id="inquiryModal" class="fixed inset-0 z-50 bg-brand-ink/50 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-inkMuted hover:text-brand-ink">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <h3 class="font-teko text-3xl text-brand-ink uppercase" id="modalTitle">Get Started</h3>
+      <p class="text-xs text-brand-inkMuted mb-6">Coach Suman will connect directly regarding availability.</p>
+
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <input type="hidden" id="selectedPlan" />
+        <div>
+          <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Your Full Name</label>
+          <input type="text" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. Joydeep Sen" />
+        </div>
+        <div>
+          <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Phone / WhatsApp</label>
+          <input type="tel" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. +91 98300 XXXXX" />
+        </div>
+        <div>
+          <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Select Interest</label>
+          <select class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none">
+            <option>1-on-1 PT with Coach Suman</option>
+            <option>Goal Timeline Transformation</option>
+            <option>Gym Floor Access</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md">
+          Confirm Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Engine -->
+  <script>
+    // 1. Navigation Drawer Toggle
+    function toggleDrawer() {
+      const drawer = document.getElementById('navDrawer');
+      const overlay = document.getElementById('drawerOverlay');
+      const isClosed = drawer.classList.contains('-translate-x-full');
+
+      if (isClosed) {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+    }
+
+    // 2. Operational Hours (Kolkata)
+    function updateLiveStatus() {
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      let isOpen = day === 0 ? (hour >= 7 && hour < 13) : (hour >= 6 && hour < 22);
+      const textEl = document.getElementById('liveStatusText');
+      if (isOpen) {
+        textEl.innerText = "Gym Open Now";
+        textEl.className = "text-emerald-700 font-bold";
+      } else {
+        textEl.innerText = "Closed • Opens 6AM";
+        textEl.className = "text-rose-700 font-bold";
+      }
+    }
+    updateLiveStatus();
+
+    // 3. Goal Timeline Forecaster
+    let currentDiscipline = 'strict';
+    function setDiscipline(level, btn) {
+      currentDiscipline = level;
+      document.querySelectorAll('.disc-btn').forEach(b => {
+        b.className = "disc-btn py-2 text-xs uppercase font-bold rounded border border-brand-cremeBorder bg-brand-creme text-brand-inkMuted hover:border-brand-ink transition";
+      });
+      btn.className = "disc-btn py-2 text-xs uppercase font-bold rounded border border-brand-ink bg-brand-ink text-brand-creme transition";
+      updateForecaster();
+    }
+
+    function updateForecaster() {
+      const curr = parseFloat(document.getElementById('currWeight').value);
+      const target = parseFloat(document.getElementById('targetWeight').value);
+      const daysPerWeek = parseInt(document.getElementById('workoutDays').value);
+
+      document.getElementById('currWeightDisplay').innerText = `${curr} kg`;
+      document.getElementById('targetWeightDisplay').innerText = `${target} kg`;
+
+      const delta = target - curr;
+      const isFatLoss = delta < 0;
+      const absDelta = Math.abs(delta);
+
+      document.getElementById('deltaDisplay').innerText = `${delta > 0 ? '+' : ''}${delta.toFixed(1)} kg`;
+
+      if (absDelta === 0) {
+        document.getElementById('daysNeededDisplay').innerText = "0";
+        document.getElementById('weeksDisplay').innerText = "Goal Achieved";
+        document.getElementById('paceDisplay').innerText = "0 kg / wk";
+        document.getElementById('projectedDate').innerText = "Today";
+        return;
+      }
+
+      let baseRate = isFatLoss ? 0.5 : 0.25;
+      if (currentDiscipline === 'strict') baseRate *= 1.25;
+      if (currentDiscipline === 'extreme') baseRate *= 1.5;
+      baseRate *= (daysPerWeek / 5);
+
+      const weeksNeeded = Math.max(1, Math.ceil(absDelta / baseRate));
+      const totalDays = weeksNeeded * 7;
+
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + totalDays);
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+
+      document.getElementById('daysNeededDisplay').innerText = totalDays;
+      document.getElementById('weeksDisplay').innerText = `~ ${weeksNeeded} Weeks (${isFatLoss ? 'Caloric Deficit' : 'Lean Surplus'})`;
+      document.getElementById('paceDisplay').innerText = `${baseRate.toFixed(2)} kg / wk`;
+      document.getElementById('projectedDate').innerText = targetDate.toLocaleDateString('en-US', options);
+    }
+    updateForecaster();
+
+    // 4. Multi-Metric Health Engine
+    function calculateHealthMetrics(e) {
+      e.preventDefault();
+      const height = parseFloat(document.getElementById('userHeight').value);
+      const weight = parseFloat(document.getElementById('userWeight').value);
+      const goal = document.getElementById('userGoal').value;
+
+      const heightM = height / 100;
+      const bmi = (weight / (heightM * heightM)).toFixed(1);
+      
+      let bmiCategory = "Optimal Composition";
+      if (bmi < 18.5) bmiCategory = "Underweight";
+      else if (bmi >= 25 && bmi < 30) bmiCategory = "Overweight";
+      else if (bmi >= 30) bmiCategory = "Obese Range";
+
+      const waterLiters = ((weight * 0.035) + 0.5).toFixed(1);
+      const glasses = Math.round((waterLiters * 1000) / 250);
+
+      let proteinMultiplier = 1.8;
+      let advice = "";
+      if (goal === 'fatloss') {
+        proteinMultiplier = 2.0;
+        advice = `Fat-loss advice from Coach Suman: Safeguard muscle retention during a caloric deficit with ${Math.round(weight * proteinMultiplier)}g daily protein and progressive lifting.`;
+      } else if (goal === 'maintenance') {
+        proteinMultiplier = 1.4;
+        advice = `Maintenance advice: Sustain functional vitality with ${Math.round(weight * proteinMultiplier)}g daily protein and athletic mobility work.`;
+      } else if (goal === 'hypertrophy') {
+        proteinMultiplier = 1.8;
+        advice = `Hypertrophy protocol: Target 8-12 rep schemes with progressive overload and ${Math.round(weight * proteinMultiplier)}g daily protein.`;
+      } else {
+        proteinMultiplier = 2.2;
+        advice = `Athlete protocol: Prioritize CNS recovery, ${waterLiters}L hydration, and ${Math.round(weight * proteinMultiplier)}g daily protein.`;
+      }
+
+      document.getElementById('resBMI').innerText = bmi;
+      document.getElementById('resBMICat').innerText = bmiCategory;
+      document.getElementById('resWater').innerHTML = `${waterLiters} <span class="text-xl text-brand-inkMuted font-teko">L</span>`;
+      document.getElementById('resGlasses').innerText = `~${glasses} Glasses`;
+      document.getElementById('resProtein').innerHTML = `${Math.round(weight * proteinMultiplier)} <span class="text-xl text-brand-inkMuted font-teko">g</span>`;
+      document.getElementById('resProteinRange').innerText = `${proteinMultiplier}g per kg bodyweight`;
+      document.getElementById('coachAdviceText').innerText = advice;
+
+      document.getElementById('resultsDashboard').classList.remove('hidden');
+      const rec = document.getElementById('coachRecommendation');
+      rec.classList.remove('hidden');
+      rec.classList.add('flex');
+    }
+
+    // 5. 1RM & Barbell Plate Math
+    function calculate1RM() {
+      const weight = parseFloat(document.getElementById('liftWeight').value) || 0;
+      const reps = parseInt(document.getElementById('liftReps').value) || 1;
+
+      const oneRM = reps === 1 ? weight : Math.round(weight * (1 + (reps / 30)));
+      document.getElementById('oneRepMaxDisplay').innerText = `${oneRM} kg`;
+      document.getElementById('p90').innerText = `${Math.round(oneRM * 0.9)} kg`;
+      document.getElementById('p80').innerText = `${Math.round(oneRM * 0.8)} kg`;
+      document.getElementById('p70').innerText = `${Math.round(oneRM * 0.7)} kg`;
+
+      let weightPerSide = Math.max(0, (weight - 20) / 2);
+      let plates = [];
+      [20, 10, 5, 2.5, 1.25].forEach(plate => {
+        const count = Math.floor(weightPerSide / plate);
+        if (count > 0) {
+          plates.push(`${count}x ${plate}kg`);
+          weightPerSide -= count * plate;
+        }
+      });
+      document.getElementById('plateMathDisplay').innerText = plates.length ? plates.join(', ') : 'Barbell only (20kg)';
+    }
+    calculate1RM();
+
+    // 6. Workout Vault Matrix
+    const routines = {
+      push: [
+        { name: "Incline Barbell Bench Press", sets: "4 Sets", reps: "8-10 Reps", focus: "Upper Clavicular Chest" },
+        { name: "Flat Dumbbell Press", sets: "3 Sets", reps: "10-12 Reps", focus: "Mid Chest Mass" },
+        { name: "Standing Overhead Dumbbell Press", sets: "4 Sets", reps: "8-10 Reps", focus: "Anterior Deltoids" },
+        { name: "Cable Lateral Raises", sets: "4 Sets", reps: "15 Reps", focus: "Lateral Deltoids" },
+        { name: "Overhead Rope Tricep Extensions", sets: "3 Sets", reps: "12-15 Reps", focus: "Triceps Long Head" }
+      ],
+      pull: [
+        { name: "Conventional Barbell Deadlifts", sets: "4 Sets", reps: "5-6 Reps", focus: "Posterior Chain & Traps" },
+        { name: "Lat Pulldowns (Neutral Grip)", sets: "4 Sets", reps: "10-12 Reps", focus: "Latissimus Dorsi" },
+        { name: "Chest-Supported T-Bar Rows", sets: "4 Sets", reps: "8-10 Reps", focus: "Mid-Back Density" },
+        { name: "Incline Dumbbell Bicep Curls", sets: "3 Sets", reps: "12 Reps", focus: "Bicep Peak Isolation" },
+        { name: "Face Pulls with External Rotation", sets: "4 Sets", reps: "15 Reps", focus: "Rear Delts & Rotator Cuff" }
+      ],
+      legs: [
+        { name: "Barbell Back Squats", sets: "4 Sets", reps: "6-8 Reps", focus: "Quadriceps & Glutes" },
+        { name: "Romanian Deadlifts (Dumbbell)", sets: "4 Sets", reps: "10 Reps", focus: "Hamstrings & Lower Back" },
+        { name: "Leg Press (Mid-Stance)", sets: "3 Sets", reps: "12-15 Reps", focus: "Quad Hypertrophy" },
+        { name: "Standing Calf Raises", sets: "4 Sets", reps: "15-20 Reps", focus: "Gastrocnemius" },
+        { name: "Hanging Leg Raises", sets: "3 Sets", reps: "15 Reps", focus: "Core & Abdominals" }
+      ]
+    };
+
+    function renderRoutine(type) {
+      document.querySelectorAll('.routine-tab').forEach(t => {
+        t.className = "routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted";
+      });
+      document.getElementById(`tab-${type}`).className = "routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-ink text-brand-creme";
+
+      const list = routines[type];
+      const html = list.map(item => `
+        <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder flex items-center justify-between hover:border-brand-ink transition shadow-sm">
+          <div>
+            <h4 class="text-brand-ink font-semibold text-sm">${item.name}</h4>
+            <span class="text-[10px] text-brand-inkMuted font-semibold uppercase tracking-wider">${item.focus}</span>
+          </div>
+          <div class="text-right">
+            <div class="text-xs font-bold text-brand-ink">${item.sets}</div>
+            <div class="text-[11px] text-brand-inkMuted">${item.reps}</div>
+          </div>
+        </div>
+      `).join('');
+      document.getElementById('routineDisplay').innerHTML = html;
+    }
+    renderRoutine('push');
+
+    // 7. Audio-Visual Rest Timer
+    let timerDuration = 60;
+    let timerRemaining = 60;
+    let timerInterval = null;
+    let audioCtx = null;
+
+    function playBeep(freq, duration) {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = freq;
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+        osc.stop(audioCtx.currentTime + duration);
+      } catch(e) {}
+    }
+
+    function updateTimerDisplay() {
+      const mins = String(Math.floor(timerRemaining / 60)).padStart(2, '0');
+      const secs = String(timerRemaining % 60).padStart(2, '0');
+      document.getElementById('timerDisplay').innerText = `${mins}:${secs}`;
+    }
+
+    function setRestTime(seconds) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      timerDuration = seconds;
+      timerRemaining = seconds;
+      updateTimerDisplay();
+      document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Start Rest';
+      document.getElementById('timerStatus').innerText = "Ready";
+    }
+
+    function toggleTimer() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Resume';
+        document.getElementById('timerStatus').innerText = "Paused";
+      } else {
+        document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-pause mr-1"></i> Pause';
+        document.getElementById('timerStatus').innerText = "Resting...";
+        timerInterval = setInterval(() => {
+          if (timerRemaining > 0) {
+            timerRemaining--;
+            updateTimerDisplay();
+            if (timerRemaining <= 3 && timerRemaining > 0) playBeep(480, 0.1);
+          } else {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            playBeep(880, 0.4);
+            document.getElementById('timerStatus').innerText = "Interval Finished";
+            document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-rotate-left mr-1"></i> Restart';
+          }
+        }, 1000);
+      }
+    }
+
+    function resetTimer() {
+      setRestTime(timerDuration);
+    }
+
+    // 8. Bengali Diet Swaps
+    const dietData = {
+      nonveg: [
+        { meal: "Post-Workout Breakfast", items: "4 Whole Eggs (Boiled/Poached) + 2 Slices Multigrain Toast", protein: "24g Protein", cal: "320 kcal" },
+        { meal: "Bengali Lean Lunch", items: "150g Chicken Breast (Light Curry) + Steamed Rice + Salad", protein: "42g Protein", cal: "480 kcal" },
+        { meal: "High Protein Dinner", items: "200g Katla / Rohu Fish Steak + 2 Handmade Roti", protein: "36g Protein", cal: "410 kcal" }
+      ],
+      veg: [
+        { meal: "Morning Super-Shake", items: "50g Chana Sattu Drink + Roasted Jeera + Lemon Water", protein: "14g Protein", cal: "210 kcal" },
+        { meal: "Vegetarian Power Lunch", items: "150g Fresh Low-Fat Paneer Curry + Dal + 2 Multigrain Roti", protein: "32g Protein", cal: "460 kcal" },
+        { meal: "Recovery Dinner", items: "1 Cup Boiled Soybean Chunks + Mixed Vegetable Khichdi", protein: "35g Protein", cal: "420 kcal" }
+      ]
+    };
+
+    function switchDietTab(type) {
+      const btnNV = document.getElementById('btnNonVeg');
+      const btnV = document.getElementById('btnVeg');
+      if (type === 'nonveg') {
+        btnNV.className = "px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md";
+        btnV.className = "px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition";
+      } else {
+        btnV.className = "px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md";
+        btnNV.className = "px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition";
+      }
+
+      const items = dietData[type];
+      document.getElementById('dietGrid').innerHTML = items.map(d => `
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-5 flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="text-brand-ink text-[10px] font-bold uppercase tracking-widest">${d.meal}</span>
+            <p class="text-brand-ink text-sm font-medium mt-2">${d.items}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-brand-cremeBorder flex justify-between text-xs font-bold">
+            <span class="text-brand-ink">${d.protein}</span>
+            <span class="text-brand-inkMuted">${d.cal}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+    switchDietTab('nonveg');
+
+    // 9. Modal Management
+    function openModal(plan) {
+      document.getElementById('selectedPlan').value = plan;
+      document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born to Fit';
+      const modal = document.getElementById('inquiryModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('inquiryModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you. Coach Suman has received your request and will contact you directly.');
+      closeModal();
+    }
+  </script>
+</body>
+</html>
