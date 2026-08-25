@@ -97,7 +97,7 @@
           <i class="fa-solid fa-calculator text-brand-ink w-5 text-center"></i> Body Metrics & Macros
         </a>
         <a href="#transformations" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-arrow-trend-up text-brand-ink w-5 text-center"></i> Transformations
+          <i class="fa-solid fa-arrow-trend-up text-brand-ink w-5 text-center"></i> Member Transformations
         </a>
         <a href="#feedback" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-star text-brand-ink w-5 text-center"></i> Member Reviews
@@ -340,7 +340,7 @@
             <button onclick="openModal('Personal Training with Mr. Jit Das')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Mr. Jit Das
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -382,7 +382,7 @@
             <button onclick="openModal('Personal Training with Suman')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Suman
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -471,89 +471,7 @@
     </div>
   </section>
 
-  <!-- Interactive Nutrition Hub -->
-  <section id="nutri-calc" class="py-24 border-b border-brand-cremeBorder">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center space-y-3 mb-12">
-        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Physiology Analysis</span>
-        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Body Composition & Macro Engine</h2>
-        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
-          Calculate daily hydration and protein targets calibrated to your athletic focus.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
-        <form id="healthEngineForm" class="grid sm:grid-cols-3 gap-6" onsubmit="calculateHealthMetrics(event)">
-          <div>
-            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Height (in cm)</label>
-            <input type="number" id="userHeight" placeholder="e.g. 175" min="100" max="250" value="175" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
-          </div>
-
-          <div>
-            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Weight (in kg)</label>
-            <input type="number" id="userWeight" placeholder="e.g. 74" min="30" max="250" step="0.5" value="74" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
-          </div>
-
-          <div>
-            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Fitness Objective</label>
-            <select id="userGoal" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition">
-              <option value="fatloss">Fat Loss & Conditioning</option>
-              <option value="maintenance">Maintenance & Longevity</option>
-              <option value="hypertrophy" selected>Hypertrophy (Muscle Gain)</option>
-              <option value="athlete">Athletic Performance</option>
-            </select>
-          </div>
-
-          <div class="sm:col-span-3">
-            <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase tracking-widest py-4 rounded-lg transition shadow-md">
-              Generate Comprehensive Profile
-            </button>
-          </div>
-        </form>
-
-        <div id="resultsDashboard" class="mt-10 pt-8 border-t border-brand-cremeBorder grid md:grid-cols-3 gap-6 hidden">
-          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
-            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
-              <i class="fa-solid fa-weight-scale"></i>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Body Mass Index</div>
-            <div id="resBMI" class="font-teko text-5xl font-bold text-brand-ink mt-1">--</div>
-            <div id="resBMICat" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">--</div>
-          </div>
-
-          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
-            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Daily Water Intake</div>
-            <div id="resWater" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">L</span></div>
-            <div id="resGlasses" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">~-- Glasses</div>
-          </div>
-
-          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
-            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
-              <i class="fa-solid fa-egg"></i>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Target Protein</div>
-            <div id="resProtein" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">g</span></div>
-            <div id="resProteinRange" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">Daily Target</div>
-          </div>
-        </div>
-
-        <div id="coachRecommendation" class="mt-6 p-4 rounded-xl bg-brand-cremeDark border border-brand-cremeBorder hidden items-center justify-between gap-4">
-          <div class="flex items-center gap-3">
-            <i class="fa-solid fa-circle-info text-brand-ink text-base"></i>
-            <p class="text-xs text-brand-ink font-medium" id="coachAdviceText">Loading guidance...</p>
-          </div>
-          <button onclick="openModal('Nutrition Consultation')" class="text-xs uppercase font-bold text-brand-ink hover:underline shrink-0">
-            Request Meal Sheet &rarr;
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Real Client Transformations Section -->
+  <!-- Real Member Transformations Section -->
   <section id="transformations" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
@@ -561,110 +479,177 @@
           <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-6 w-auto rounded" />
           <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Real Results</span>
         </div>
-        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Client Transformations</h2>
-        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
-          Real people, real discipline. Explore verified physique transformations achieved under Mr. Jit Das and Suman at Born2Fit.
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Verified Member Transformations</h2>
+        <p class="text-brand-inkMuted text-sm max-w-2xl mx-auto font-normal">
+          Real athletes and daily gym members who sculpted their bodies under the guidance of Mr. Jit Das (Mr. India) and Suman at Born2Fit.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Transformations Grid: 5 Detailed Member Studies -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         
-        <!-- Transformation Card 1 -->
+        <!-- Transformation 1: 6 Months (Back & V-Taper) -->
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
           <div>
             <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
               <img 
-                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=700&auto=format&fit=crop" 
-                alt="Client Transformation Fat Loss" 
-                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+                src="WhatsApp Image 2026-08-26 at 1.06.56 AM.jpeg" 
+                alt="6 Months Back Hypertrophy & V-Taper Transformation" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
               />
               <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
-                -14 kg Fat Loss
+                Stage Shred & V-Taper
               </div>
               <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
-                16 Weeks
+                <i class="fa-solid fa-stopwatch mr-1"></i> 6 Months
               </div>
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Rahul Sengupta</h3>
-              <span class="text-[11px] font-bold text-brand-inkMuted">IT Professional</span>
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Back Lat Width & Striations</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Physique Prep</span>
             </div>
             
             <p class="text-xs text-brand-inkMuted leading-relaxed">
-              "Sedentary desk job resulted in severe weight gain and posture issues. Mr. Jit Das and Suman completely rebuilt my routine with calculated calorie deficits and heavy lifting."
+              Achieved extreme latissimus dorsi expansion, deep rhomboid definition, and paper-thin skin conditioning over 6 months of strict progressive deadlifting, heavy rowing, and calculated carb cycling.
             </p>
           </div>
 
-          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
-            <span>Body Fat: <strong class="text-brand-ink">28% &rarr; 14%</strong></span>
-            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">1-on-1 PT</span>
+          <div class="mt-5 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Result: <strong class="text-brand-ink">Striated V-Taper</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted border border-brand-cremeBorder px-2 py-0.5 rounded">6 Months</span>
           </div>
         </div>
 
-        <!-- Transformation Card 2 -->
+        <!-- Transformation 2: 6 Months (Female Muscle Conditioning) -->
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
           <div>
             <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
               <img 
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=700&auto=format&fit=crop" 
-                alt="Client Transformation Muscle Gain" 
-                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+                src="WhatsApp Image 2026-08-26 at 1.06.18 AM.jpeg" 
+                alt="6 Months Female Core & Shoulder Sculpting Transformation" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
               />
               <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
-                +8 kg Muscle Mass
+                Core Tightening & Delts
               </div>
               <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
-                24 Weeks
+                <i class="fa-solid fa-stopwatch mr-1"></i> 6 Months
               </div>
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Aniket Mukherjee</h3>
-              <span class="text-[11px] font-bold text-brand-inkMuted">College Athlete</span>
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Midsection Recomposition</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Female Strength</span>
             </div>
             
             <p class="text-xs text-brand-inkMuted leading-relaxed">
-              "Started skinny with zero strength. Under championship guidance, we prioritized progressive overload and clean high-protein meals. Gained solid lean muscle density."
+              Complete waist tightening, lower abdominal flattening, and capped deltoid development in 6 months through tailored hypertrophy splits, functional core stability, and targeted metabolic nutrition.
             </p>
           </div>
 
-          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
-            <span>Weight: <strong class="text-brand-ink">58 kg &rarr; 66 kg</strong></span>
-            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">Hypertrophy</span>
+          <div class="mt-5 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Result: <strong class="text-brand-ink">Athletic Muscle Tone</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted border border-brand-cremeBorder px-2 py-0.5 rounded">6 Months</span>
           </div>
         </div>
 
-        <!-- Transformation Card 3 -->
+        <!-- Transformation 3: 46 Days (Rapid Visceral Belly Cut) -->
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
           <div>
             <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
               <img 
-                src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=700&auto=format&fit=crop" 
-                alt="Client Transformation Recomposition" 
-                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+                src="WhatsApp Image 2026-08-26 at 1.05.34 AM.jpeg" 
+                alt="46 Days Rapid Belly Fat & Waistline Cut" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
               />
               <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
-                Body Recomposition
+                Rapid Fat Shred
               </div>
               <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
-                12 Weeks
+                <i class="fa-solid fa-stopwatch mr-1"></i> 46 Days
               </div>
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Priyanka Das</h3>
-              <span class="text-[11px] font-bold text-brand-inkMuted">Doctor</span>
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Visceral Fat Reduction</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Rapid Cut</span>
             </div>
             
             <p class="text-xs text-brand-inkMuted leading-relaxed">
-              "Rehabilitated chronic lower back pain and built great functional endurance. The training environment at Born2Fit is motivating, disciplined, and genuinely world-class."
+              Drastic reduction in belly protrusion and love handles in just 46 days. Strict insulin control, structured caloric deficit, and high-frequency compound resistance training transformed this midsection.
             </p>
           </div>
 
-          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
-            <span>Deadlift: <strong class="text-brand-ink">30 kg &rarr; 85 kg</strong></span>
-            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">Mobility & Core</span>
+          <div class="mt-5 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Result: <strong class="text-brand-ink">Flat Waist & Chest Lift</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted border border-brand-cremeBorder px-2 py-0.5 rounded">46 Days</span>
+          </div>
+        </div>
+
+        <!-- Transformation 4: 45 Days (Full-Body Recomp with Coach) -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
+          <div>
+            <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
+              <img 
+                src="WhatsApp Image 2026-08-26 at 1.04.35 AM.jpeg" 
+                alt="45 Days Full Body Weight Loss & Facial Toning" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
+                Full-Body Fat Loss
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
+                <i class="fa-solid fa-stopwatch mr-1"></i> 45 Days
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Overall Mass & Face Cut</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Trainer Mentored</span>
+            </div>
+            
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Supervised personal training led to rapid inches lost across the waist, hips, and facial jawline within 45 days. Enhanced stamina, functional posture, and active lifestyle transformation.
+            </p>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Result: <strong class="text-brand-ink">Massive Inches Lost</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted border border-brand-cremeBorder px-2 py-0.5 rounded">45 Days</span>
+          </div>
+        </div>
+
+        <!-- Transformation 5: 3 Months (Bodybuilder Stage Conditioning) -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group md:col-span-2 lg:col-span-1">
+          <div>
+            <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
+              <img 
+                src="WhatsApp Image 2026-08-26 at 1.03.42 AM.jpeg" 
+                alt="3 Months Bodybuilding Contest Stage Shredding" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
+                Contest Conditioning
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
+                <i class="fa-solid fa-stopwatch mr-1"></i> 3 Months
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Championship Shred</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Contest Ready</span>
+            </div>
+            
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Transformed from high body fat to ultra-dense vascularity, 6-pack serratus cuts, and stage-ready chest striations in 3 months of strict competition prep supervised by Mr. India Jit Das.
+            </p>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Result: <strong class="text-brand-ink">Ultra-Low Body Fat & Abs</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted border border-brand-cremeBorder px-2 py-0.5 rounded">3 Months</span>
           </div>
         </div>
 
