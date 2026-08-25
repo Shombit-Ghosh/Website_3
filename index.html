@@ -64,6 +64,14 @@
       -webkit-appearance: none;
       box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     }
+    
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="bg-brand-creme text-brand-ink font-jakarta selection:bg-brand-ink selection:text-brand-creme antialiased contour-creme-bg">
@@ -95,6 +103,9 @@
         </a>
         <a href="#nutri-calc" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-calculator text-brand-ink w-5 text-center"></i> Body Metrics & Macros
+        </a>
+        <a href="#pt-articles" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-book-open-reader text-brand-ink w-5 text-center"></i> Training Knowledge Hub
         </a>
         <a href="#transformations" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-arrow-trend-up text-brand-ink w-5 text-center"></i> Member Transformations
@@ -222,69 +233,117 @@
     </div>
   </section>
 
-  <!-- Founder & Owner Spotlight: Mr. Jit Das (Mr. India) -->
+  <!-- Founder & Owner Spotlight: Mr. Jit Das (Mr. India) with 3 Real Images -->
   <section id="owner" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5">
-          <div class="relative rounded-2xl overflow-hidden border border-brand-cremeBorder group shadow-2xl bg-brand-cremeCard p-2">
-            <div class="relative aspect-[3/4] rounded-xl overflow-hidden">
-              <img 
-                src="WhatsApp Image 2026-08-25 at 4.47.31 PM.jpeg" 
-                alt="Owner & Personal Trainer Mr. Jit Das Mr India" 
-                class="w-full h-full object-cover object-top filter contrast-110 group-hover:scale-105 transition duration-700"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-transparent to-transparent"></div>
-              <div class="absolute top-4 left-4 flex items-center gap-2">
-                <span class="px-3 py-1 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase tracking-widest rounded-full shadow">
-                  <i class="fa-solid fa-trophy text-amber-300 mr-1"></i> Mr. India Titleholder
-                </span>
-              </div>
-              <div class="absolute bottom-4 inset-x-4 p-4 rounded-lg bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-sm flex items-center justify-between">
-                <div>
-                  <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Mr. Jit Das</h3>
-                  <p class="text-xs text-brand-inkMuted font-semibold">Founder, Owner & Personal Trainer</p>
-                </div>
-                <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Icon" class="h-8 w-auto rounded" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-[11px] font-bold uppercase tracking-widest text-brand-ink">
+      
+      <!-- Top Title Bar -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-[11px] font-bold uppercase tracking-widest text-brand-ink mb-3 shadow-sm">
             <i class="fa-solid fa-crown text-amber-600"></i> Leadership & Championship Pedigree
           </div>
-          
           <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase leading-none">
-            Built by a Champion. <br/><span class="text-brand-inkMuted font-light">Dedicated to Your Peak Physique.</span>
+            Built by a Champion. <span class="text-brand-inkMuted font-light">Mr. Jit Das (Mr. India)</span>
           </h2>
+        </div>
+        <p class="text-xs text-brand-inkMuted font-semibold uppercase tracking-wider mt-2 md:mt-0">Founder, Owner & Elite Head Coach</p>
+      </div>
 
-          <p class="text-brand-inkMuted text-base leading-relaxed">
-            <strong>Born2Fit</strong> is founded and owned by <strong>Mr. Jit Das</strong>, an accomplished <strong>Mr. India</strong> titleholder and dedicated personal trainer. Bringing national-level bodybuilding mastery and rigorous athletic discipline directly to Gouranganagar, Jit Das oversees client physical transformations through unmatched real-world experience, form mechanics, and stage-tested nutritional science.
-          </p>
-
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder shadow-sm">
-              <div class="text-brand-ink font-bold text-sm mb-1"><i class="fa-solid fa-medal mr-2"></i>National Level Pedigree</div>
-              <p class="text-xs text-brand-inkMuted">Direct championship-grade guidance on muscular symmetry, conditioning, and contest prep.</p>
+      <!-- 3-Image Gallery Grid & Bio -->
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Image 1: Main Portrait -->
+        <div class="lg:col-span-4 relative rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard p-2 shadow-xl group">
+          <div class="relative h-full min-h-[380px] rounded-xl overflow-hidden">
+            <img 
+              src="WhatsApp Image 2026-08-25 at 4.47.31 PM.jpeg" 
+              alt="Mr. Jit Das Mr India Portrait" 
+              class="w-full h-full object-cover object-top filter contrast-110 group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase tracking-widest rounded-full shadow">
+                <i class="fa-solid fa-trophy text-amber-300 mr-1"></i> Mr. India
+              </span>
             </div>
-            <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder shadow-sm">
-              <div class="text-brand-ink font-bold text-sm mb-1"><i class="fa-solid fa-bullseye mr-2"></i>High-Standard Facility</div>
-              <p class="text-xs text-brand-inkMuted">Curated equipment and lifting floor personally calibrated for optimal biomechanical resistance.</p>
+            <div class="absolute bottom-3 inset-x-3 p-3 rounded bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-sm">
+              <h4 class="font-teko text-2xl text-brand-ink uppercase leading-none">Elite Heavy Density</h4>
+              <p class="text-[11px] text-brand-inkMuted font-medium">Championship Power & Conditioning</p>
             </div>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <button onclick="openModal('1-on-1 PT with Mr. Jit Das (Mr. India)')" class="bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest px-6 py-3.5 rounded transition shadow-md">
-              Train with Mr. Jit Das
-            </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20am%20interested%20in%20personal%20training%20at%20Born2Fit%20Gouranganagar" target="_blank" class="border border-brand-cremeBorder hover:border-brand-ink bg-brand-cremeCard text-brand-ink font-bold uppercase text-xs tracking-widest px-6 py-3.5 rounded transition flex items-center gap-2 shadow-sm">
-              <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Mr. Jit Das
-            </a>
           </div>
         </div>
+
+        <!-- Image 2: Gym Cable Execution -->
+        <div class="lg:col-span-4 relative rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard p-2 shadow-xl group">
+          <div class="relative h-full min-h-[380px] rounded-xl overflow-hidden">
+            <img 
+              src="WhatsApp Image 2026-08-26 at 1.24.01 AM.jpeg" 
+              alt="Mr. Jit Das Gym Training" 
+              class="w-full h-full object-cover object-center filter contrast-110 group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink border border-brand-cremeBorder text-[10px] font-bold uppercase tracking-widest rounded-full shadow">
+                Biomechanics
+              </span>
+            </div>
+            <div class="absolute bottom-3 inset-x-3 p-3 rounded bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-sm">
+              <h4 class="font-teko text-2xl text-brand-ink uppercase leading-none">Machine & Cable Precision</h4>
+              <p class="text-[11px] text-brand-inkMuted font-medium">Maximal Chest & Deltoid Contraction</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 3: Stage Back Lat Spread & Glute Striations -->
+        <div class="lg:col-span-4 relative rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard p-2 shadow-xl group">
+          <div class="relative h-full min-h-[380px] rounded-xl overflow-hidden">
+            <img 
+              src="WhatsApp Image 2026-08-26 at 1.24.02 AM.jpg" 
+              alt="Mr. Jit Das Back Lat Spread and Hamstrings" 
+              class="w-full h-full object-cover object-top filter contrast-110 group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3">
+              <span class="px-3 py-1 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase tracking-widest rounded-full shadow">
+                Stage Conditioning
+              </span>
+            </div>
+            <div class="absolute bottom-3 inset-x-3 p-3 rounded bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-sm">
+              <h4 class="font-teko text-2xl text-brand-ink uppercase leading-none">Complete Posterior Chain</h4>
+              <p class="text-[11px] text-brand-inkMuted font-medium">Glute, Hamstring & Latissimus Striations</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Description & Pedigree Highlights -->
+      <div class="mt-10 bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-8 shadow-xl grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-8 space-y-4">
+          <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">
+            Championship-Level Mentorship Available at Born2Fit
+          </h3>
+          <p class="text-brand-inkMuted text-sm leading-relaxed">
+            As a renowned <strong>Mr. India titleholder</strong>, <strong>Mr. Jit Das</strong> applies championship methodologies to every client at Born2Fit Gouranganagar. From raw beginner strength building to extreme contest prep, his protocols prioritize joint safety, perfect muscular tension, and stage-proven nutritional science.
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs font-bold text-brand-ink pt-1">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-xs"></i> National Titleholder Experience</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-xs"></i> Biomechanical Mastery</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-xs"></i> Custom Body Composition Plans</span>
+          </div>
+        </div>
+        
+        <div class="md:col-span-4 flex flex-col gap-3 justify-center">
+          <button onclick="openModal('1-on-1 PT with Mr. Jit Das (Mr. India)')" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md text-center">
+            Train with Mr. Jit Das
+          </button>
+          <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20am%20interested%20in%20personal%20training%20at%20Born2Fit%20Gouranganagar" target="_blank" class="w-full border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition text-center flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Mr. Jit Das
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -340,7 +399,7 @@
             <button onclick="openModal('Personal Training with Mr. Jit Das')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Mr. Jit Das
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -382,7 +441,7 @@
             <button onclick="openModal('Personal Training with Suman')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Suman
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -471,8 +530,180 @@
     </div>
   </section>
 
-  <!-- Real Member Transformations Section -->
-  <section id="transformations" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
+  <!-- Interactive Nutrition Hub -->
+  <section id="nutri-calc" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-12">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Physiology Analysis</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Body Composition & Macro Engine</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Calculate daily hydration and protein targets calibrated to your athletic focus.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
+        <form id="healthEngineForm" class="grid sm:grid-cols-3 gap-6" onsubmit="calculateHealthMetrics(event)">
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Height (in cm)</label>
+            <input type="number" id="userHeight" placeholder="e.g. 175" min="100" max="250" value="175" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Weight (in kg)</label>
+            <input type="number" id="userWeight" placeholder="e.g. 74" min="30" max="250" step="0.5" value="74" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition" />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-2">Fitness Objective</label>
+            <select id="userGoal" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-3 text-brand-ink text-sm focus:outline-none focus:border-brand-ink transition">
+              <option value="fatloss">Fat Loss & Conditioning</option>
+              <option value="maintenance">Maintenance & Longevity</option>
+              <option value="hypertrophy" selected>Hypertrophy (Muscle Gain)</option>
+              <option value="athlete">Athletic Performance</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-3">
+            <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase tracking-widest py-4 rounded-lg transition shadow-md">
+              Generate Comprehensive Profile
+            </button>
+          </div>
+        </form>
+
+        <div id="resultsDashboard" class="mt-10 pt-8 border-t border-brand-cremeBorder grid md:grid-cols-3 gap-6 hidden">
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-weight-scale"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Body Mass Index</div>
+            <div id="resBMI" class="font-teko text-5xl font-bold text-brand-ink mt-1">--</div>
+            <div id="resBMICat" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">--</div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Daily Water Intake</div>
+            <div id="resWater" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">L</span></div>
+            <div id="resGlasses" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">~-- Glasses</div>
+          </div>
+
+          <div class="bg-brand-cremeDark/50 p-6 rounded-xl border border-brand-cremeBorder text-center">
+            <div class="w-8 h-8 rounded-full border border-brand-cremeBorder bg-brand-cremeCard text-brand-ink flex items-center justify-center mx-auto mb-3 text-xs shadow-sm">
+              <i class="fa-solid fa-egg"></i>
+            </div>
+            <div class="text-[10px] uppercase tracking-widest text-brand-inkMuted font-bold">Target Protein</div>
+            <div id="resProtein" class="font-teko text-5xl font-bold text-brand-ink mt-1">-- <span class="text-xl text-brand-inkMuted font-teko">g</span></div>
+            <div id="resProteinRange" class="text-xs font-semibold uppercase text-brand-inkMuted mt-1">Daily Target</div>
+          </div>
+        </div>
+
+        <div id="coachRecommendation" class="mt-6 p-4 rounded-xl bg-brand-cremeDark border border-brand-cremeBorder hidden items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-circle-info text-brand-ink text-base"></i>
+            <p class="text-xs text-brand-ink font-medium" id="coachAdviceText">Loading guidance...</p>
+          </div>
+          <button onclick="openModal('Nutrition Consultation')" class="text-xs uppercase font-bold text-brand-ink hover:underline shrink-0">
+            Request Meal Sheet &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Training Knowledge & Articles (Sliding Carousel) -->
+  <section id="pt-articles" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 mb-2">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Icon" class="h-5 w-auto rounded" />
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Evidence-Based Coaching</span>
+          </div>
+          <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Personal Training Insights</h2>
+        </div>
+        
+        <!-- Sliding Nav Controls -->
+        <div class="flex items-center gap-3 mt-4 md:mt-0">
+          <button onclick="slideArticles('left')" class="w-11 h-11 rounded-full border border-brand-cremeBorder bg-brand-cremeCard hover:bg-brand-ink hover:text-white transition flex items-center justify-center shadow-sm">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <button onclick="slideArticles('right')" class="w-11 h-11 rounded-full border border-brand-cremeBorder bg-brand-cremeCard hover:bg-brand-ink hover:text-white transition flex items-center justify-center shadow-sm">
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal Sliding Track -->
+      <div id="articlesTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar pb-4">
+        
+        <!-- Article 1 -->
+        <div class="w-[320px] sm:w-[380px] shrink-0 snap-start bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink text-[10px] font-bold uppercase rounded tracking-wider">Biomechanics</span>
+            <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight">Why 1-on-1 Form Precision Breaks Muscle Plateaus</h3>
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Moving weights without matching your limb levers and joint angles causes connective strain instead of targeted hypertrophy. Coach Jit Das and Suman correct minute foot angles, bar paths, and scapular retraction to ensure 100% mechanical tension lands on the target muscle.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
+            <span>By Mr. Jit Das</span>
+            <span class="text-brand-inkMuted">4 Min Read</span>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="w-[320px] sm:w-[380px] shrink-0 snap-start bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink text-[10px] font-bold uppercase rounded tracking-wider">Metabolic Nutrition</span>
+            <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight">Sustainable Fat Loss with Local Bengali Staples</h3>
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Extreme boiled-chicken diets fail because they are unsustainable. At Born2Fit, our personal trainers calibrate macronutrient distributions around rice, Rohu/Katla fish, eggs, sattu, and paneer—allowing members to torch visceral fat while eating cultural food daily.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
+            <span>By Suman</span>
+            <span class="text-brand-inkMuted">5 Min Read</span>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="w-[320px] sm:w-[380px] shrink-0 snap-start bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink text-[10px] font-bold uppercase rounded tracking-wider">Strength Science</span>
+            <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight">Progressive Overload vs. Random Muscle Confusion</h3>
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Switching workouts randomly every week prevents the central nervous system from adapting. We log your weekly reps, micro-load bar weight, and systematically increase volume so your muscular strength increases measurably week after week.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
+            <span>By Mr. Jit Das</span>
+            <span class="text-brand-inkMuted">3 Min Read</span>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="w-[320px] sm:w-[380px] shrink-0 snap-start bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink text-[10px] font-bold uppercase rounded tracking-wider">Recovery Protocols</span>
+            <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight">CNS Fatigue & Hydration in Kolkata Humidity</h3>
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              Sweating without electrolyte replacement halts cellular protein synthesis and spikes cortisol. Our trainers structure hydration targets (3.5L–4.5L/day) and intra-workout sodium balance to keep workout intensity elevated throughout grueling sessions.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
+            <span>By Suman</span>
+            <span class="text-brand-inkMuted">4 Min Read</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Member Transformations Section (5 Real Photo Studies) -->
+  <section id="transformations" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
         <div class="inline-flex items-center justify-center gap-2 mb-1">
@@ -1191,7 +1422,18 @@
       rec.classList.add('flex');
     }
 
-    // 5. Interactive FAQ Toggle
+    // 5. Sliding Carousel for Articles
+    function slideArticles(direction) {
+      const track = document.getElementById('articlesTrack');
+      const scrollAmount = 380;
+      if (direction === 'left') {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+
+    // 6. Interactive FAQ Toggle
     function toggleFaq(button) {
       const answer = button.nextElementSibling;
       const icon = button.querySelector('i');
@@ -1208,7 +1450,7 @@
       }
     }
 
-    // 6. Modal Management
+    // 7. Modal Management
     function openModal(plan) {
       document.getElementById('selectedPlan').value = plan;
       document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born2Fit';
