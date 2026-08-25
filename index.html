@@ -96,14 +96,17 @@
         <a href="#nutri-calc" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-calculator text-brand-ink w-5 text-center"></i> Body Metrics & Macros
         </a>
-        <a href="#strength-lab" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-dumbbell text-brand-ink w-5 text-center"></i> 1RM Plate Math
+        <a href="#transformations" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-arrow-trend-up text-brand-ink w-5 text-center"></i> Transformations
         </a>
-        <a href="#workout-matrix" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-list-check text-brand-ink w-5 text-center"></i> Workout Vault & Timer
+        <a href="#feedback" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-star text-brand-ink w-5 text-center"></i> Member Reviews
         </a>
-        <a href="#diet-swap" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-utensils text-brand-ink w-5 text-center"></i> Kolkata Meal Swaps
+        <a href="#gallery" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-camera text-brand-ink w-5 text-center"></i> Gym Gallery
+        </a>
+        <a href="#faq" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
+          <i class="fa-solid fa-circle-question text-brand-ink w-5 text-center"></i> FAQs
         </a>
         <a href="#plans" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-gem text-brand-ink w-5 text-center"></i> Membership Tiers
@@ -124,7 +127,7 @@
     </div>
   </aside>
 
-  <!-- Navbar with Logo -->
+  <!-- Navbar -->
   <header class="fixed w-full top-0 z-40 bg-brand-creme/90 backdrop-blur-md border-b border-brand-cremeBorder">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
@@ -154,7 +157,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Brand Logo Watermark and Identity -->
+  <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center pt-24 overflow-hidden border-b border-brand-cremeBorder contour-light-lines">
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10 py-16">
       <div class="lg:col-span-7 space-y-6">
@@ -337,7 +340,7 @@
             <button onclick="openModal('Personal Training with Mr. Jit Das')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Mr. Jit Das
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -379,7 +382,7 @@
             <button onclick="openModal('Personal Training with Suman')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Suman
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training%20at%20Born2Fit" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -550,144 +553,367 @@
     </div>
   </section>
 
-  <!-- Interactive Strength Lab (1RM & Plate Math) -->
-  <section id="strength-lab" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+  <!-- Real Client Transformations Section -->
+  <section id="transformations" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center space-y-3 mb-12">
-        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Power Dynamics</span>
-        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">1-Rep Max & Barbell Plate Distribution</h2>
+      <div class="text-center space-y-3 mb-16">
+        <div class="inline-flex items-center justify-center gap-2 mb-1">
+          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-6 w-auto rounded" />
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Real Results</span>
+        </div>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Client Transformations</h2>
         <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
-          Estimate one-rep limits and get the exact Olympic plate arrangement for each sleeve.
+          Real people, real discipline. Explore verified physique transformations achieved under Mr. Jit Das and Suman at Born2Fit.
         </p>
       </div>
 
-      <div class="max-w-4xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-10 shadow-xl">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div class="space-y-4">
-            <div>
-              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Lifted Weight (kg)</label>
-              <input type="number" id="liftWeight" value="80" min="20" max="400" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" oninput="calculate1RM()" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Repetitions Performed (1-12)</label>
-              <input type="number" id="liftReps" value="6" min="1" max="12" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-4 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" oninput="calculate1RM()" />
-            </div>
-            <div class="p-4 bg-brand-creme rounded-xl border border-brand-cremeBorder">
-              <div class="text-[10px] uppercase font-bold text-brand-inkMuted tracking-wider">Plates Per Side (20kg Bar)</div>
-              <div id="plateMathDisplay" class="text-sm font-semibold text-brand-ink mt-1">1x 20kg, 1x 10kg</div>
-            </div>
-          </div>
-
-          <div class="bg-brand-cremeDark/50 border border-brand-cremeBorder rounded-xl p-6 text-center space-y-4">
-            <span class="text-[10px] uppercase font-bold text-brand-inkMuted tracking-widest">Estimated 1-Rep Max</span>
-            <div id="oneRepMaxDisplay" class="font-teko text-7xl font-bold text-brand-ink leading-none">96 kg</div>
-            
-            <div class="grid grid-cols-3 gap-2 pt-4 border-t border-brand-cremeBorder text-xs">
-              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
-                <span class="text-brand-inkMuted block font-bold text-[10px]">90% Max</span>
-                <span id="p90" class="text-brand-ink font-bold text-sm">86 kg</span>
-              </div>
-              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
-                <span class="text-brand-inkMuted block font-bold text-[10px]">80% Hyper</span>
-                <span id="p80" class="text-brand-ink font-bold text-sm">77 kg</span>
-              </div>
-              <div class="p-2 bg-brand-cremeCard rounded-lg border border-brand-cremeBorder shadow-sm">
-                <span class="text-brand-inkMuted block font-bold text-[10px]">70% Volume</span>
-                <span id="p70" class="text-brand-ink font-bold text-sm">67 kg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Workout Routine Matrix & Rest Timer -->
-  <section id="workout-matrix" class="py-24 border-b border-brand-cremeBorder">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Transformation Card 1 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
           <div>
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Structured Splits</span>
-            <h2 class="font-teko text-5xl text-brand-ink uppercase">Born2Fit Training Vault</h2>
-            <p class="text-brand-inkMuted text-sm font-normal">Explore the exact workout structures implemented at Born2Fit.</p>
+            <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=700&auto=format&fit=crop" 
+                alt="Client Transformation Fat Loss" 
+                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
+                -14 kg Fat Loss
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
+                16 Weeks
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Rahul Sengupta</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">IT Professional</span>
+            </div>
+            
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              "Sedentary desk job resulted in severe weight gain and posture issues. Mr. Jit Das and Suman completely rebuilt my routine with calculated calorie deficits and heavy lifting."
+            </p>
           </div>
 
-          <div class="flex flex-wrap gap-2">
-            <button onclick="renderRoutine('push')" id="tab-push" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-ink text-brand-creme">Push (Chest/Shoulders/Triceps)</button>
-            <button onclick="renderRoutine('pull')" id="tab-pull" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted">Pull (Back/Biceps)</button>
-            <button onclick="renderRoutine('legs')" id="tab-legs" class="routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted">Legs & Core</button>
-          </div>
-
-          <div id="routineDisplay" class="space-y-3 pt-2"></div>
-        </div>
-
-        <div class="lg:col-span-5 bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 sm:p-8 shadow-xl">
-          <div class="text-center space-y-2">
-            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-inkMuted">Interval Tool</span>
-            <h3 class="font-teko text-4xl text-brand-ink uppercase">Precision Rest Timer</h3>
-          </div>
-
-          <div class="my-8 text-center">
-            <div id="timerDisplay" class="font-teko text-8xl font-bold text-brand-ink tracking-wider">01:00</div>
-            <div id="timerStatus" class="text-[11px] font-bold uppercase tracking-widest text-brand-inkMuted mt-1">Ready</div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-2 mb-6">
-            <button onclick="setRestTime(30)" class="time-preset py-2 rounded-lg bg-brand-creme border border-brand-cremeBorder text-xs font-bold hover:border-brand-ink text-brand-inkMuted">30s (Pump)</button>
-            <button onclick="setRestTime(60)" class="time-preset py-2 rounded-lg bg-brand-ink text-xs font-bold text-brand-creme">60s (Hyper)</button>
-            <button onclick="setRestTime(90)" class="time-preset py-2 rounded-lg bg-brand-creme border border-brand-cremeBorder text-xs font-bold hover:border-brand-ink text-brand-inkMuted">90s (Heavy)</button>
-          </div>
-
-          <div class="flex gap-3">
-            <button id="startTimerBtn" onclick="toggleTimer()" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md">
-              <i class="fa-solid fa-play mr-1"></i> Start Rest
-            </button>
-            <button onclick="resetTimer()" class="px-5 border border-brand-cremeBorder hover:bg-brand-creme text-brand-ink font-bold uppercase text-xs rounded-lg transition">
-              <i class="fa-solid fa-rotate-left"></i>
-            </button>
+          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Body Fat: <strong class="text-brand-ink">28% &rarr; 14%</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">1-on-1 PT</span>
           </div>
         </div>
+
+        <!-- Transformation Card 2 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
+          <div>
+            <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=700&auto=format&fit=crop" 
+                alt="Client Transformation Muscle Gain" 
+                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
+                +8 kg Muscle Mass
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
+                24 Weeks
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Aniket Mukherjee</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">College Athlete</span>
+            </div>
+            
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              "Started skinny with zero strength. Under championship guidance, we prioritized progressive overload and clean high-protein meals. Gained solid lean muscle density."
+            </p>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Weight: <strong class="text-brand-ink">58 kg &rarr; 66 kg</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">Hypertrophy</span>
+          </div>
+        </div>
+
+        <!-- Transformation Card 3 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
+          <div>
+            <div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-brand-cremeBorder mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=700&auto=format&fit=crop" 
+                alt="Client Transformation Recomposition" 
+                class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute top-3 left-3 bg-brand-ink text-brand-creme text-[10px] font-bold uppercase px-3 py-1 rounded-full shadow">
+                Body Recomposition
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-creme/95 text-brand-ink text-[10px] font-bold px-2.5 py-1 rounded shadow border border-brand-cremeBorder">
+                12 Weeks
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-none">Priyanka Das</h3>
+              <span class="text-[11px] font-bold text-brand-inkMuted">Doctor</span>
+            </div>
+            
+            <p class="text-xs text-brand-inkMuted leading-relaxed">
+              "Rehabilitated chronic lower back pain and built great functional endurance. The training environment at Born2Fit is motivating, disciplined, and genuinely world-class."
+            </p>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs font-semibold text-brand-ink">
+            <span>Deadlift: <strong class="text-brand-ink">30 kg &rarr; 85 kg</strong></span>
+            <span class="text-[10px] uppercase font-bold text-brand-inkMuted">Mobility & Core</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Interactive Bengali Meal Matrix -->
-  <section id="diet-swap" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+  <!-- Member Feedback & Reviews Section -->
+  <section id="feedback" class="py-24 border-b border-brand-cremeBorder">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center space-y-3 mb-12">
-        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Nutrition Matrix</span>
-        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Bengali Macro Meal Replacements</h2>
+      <div class="text-center space-y-3 mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Community Voice</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">What Our Members Say</h2>
         <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
-          Calibrated food choices sourced directly from local markets around Gouranganagar.
+          Honest feedback from lifters and fitness enthusiasts training daily at Born2Fit Gouranganagar.
         </p>
       </div>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="flex justify-center gap-4 mb-8">
-          <button id="btnNonVeg" onclick="switchDietTab('nonveg')" class="px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md">
-            Non-Veg (Fish / Poultry / Eggs)
-          </button>
-          <button id="btnVeg" onclick="switchDietTab('veg')" class="px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition">
-            Vegetarian (Sattu / Paneer)
-          </button>
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Review 1 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs text-brand-ink leading-relaxed font-medium">
+              "Having Mr. Jit Das (Mr. India) right on the floor guiding your posture and angles makes a massive difference. You simply don't get this level of expertise in typical gyms."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-cremeBorder flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-cremeDark flex items-center justify-center font-bold text-xs text-brand-ink">
+              SD
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-brand-ink">Sourav Dutta</h4>
+              <p class="text-[10px] text-brand-inkMuted">Member for 8 Months</p>
+            </div>
+          </div>
         </div>
 
-        <div id="dietGrid" class="grid sm:grid-cols-3 gap-6"></div>
+        <!-- Review 2 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs text-brand-ink leading-relaxed font-medium">
+              "Suman sir is exceptionally patient with form correction. His diet plan was super realistic with regular Bengali homemade food. Dropped 9 kgs without feeling starved."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-cremeBorder flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-cremeDark flex items-center justify-center font-bold text-xs text-brand-ink">
+              AC
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-brand-ink">Arpita Chowdhury</h4>
+              <p class="text-[10px] text-brand-inkMuted">Personal Training Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-brand-ink transition">
+          <div class="space-y-4">
+            <div class="flex items-center gap-1 text-amber-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs text-brand-ink leading-relaxed font-medium">
+              "Top-tier barbell equipment, clean surroundings, and serious lifters. Open from 6 AM to 10 PM every single day which fits perfectly with my erratic work schedule."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-cremeBorder flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-cremeDark flex items-center justify-center font-bold text-xs text-brand-ink">
+              MB
+            </div>
+            <div>
+              <h4 class="font-bold text-xs text-brand-ink">Manish Banerjee</h4>
+              <p class="text-[10px] text-brand-inkMuted">Annual Tier Member</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gym Gallery Section -->
+  <section id="gallery" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-16">
+        <div class="inline-flex items-center justify-center gap-2 mb-1">
+          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Logo" class="h-6 w-auto rounded" />
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Facility Showcase</span>
+        </div>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Inside Born2Fit</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Take a look at our heavy iron floor, high-grade Olympic barbells, dumbbells, and dedicated personal training zones in Gouranganagar.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group">
+          <img 
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=700&auto=format&fit=crop" 
+            alt="Born2Fit Gym Heavy Free Weights" 
+            class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <p class="text-xs font-bold text-brand-creme uppercase tracking-wider">Heavy Free-Weights & Dumbbell Racks</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group">
+          <img 
+            src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=700&auto=format&fit=crop" 
+            alt="Olympic Barbells & Power Racks" 
+            class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <p class="text-xs font-bold text-brand-creme uppercase tracking-wider">Olympic Squat & Bench Stations</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group">
+          <img 
+            src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=700&auto=format&fit=crop" 
+            alt="Personal Training Floor" 
+            class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <p class="text-xs font-bold text-brand-creme uppercase tracking-wider">1-on-1 PT Alignment Floor</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group">
+          <img 
+            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=700&auto=format&fit=crop" 
+            alt="Cardio & Conditioning Deck" 
+            class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <p class="text-xs font-bold text-brand-creme uppercase tracking-wider">Cardio & HIIT Deck</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group">
+          <img 
+            src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=700&auto=format&fit=crop" 
+            alt="Functional Training Space" 
+            class="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+            <p class="text-xs font-bold text-brand-creme uppercase tracking-wider">Cable Crossover & Functional Towers</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group flex items-center justify-center p-6 text-center bg-brand-creme">
+          <div class="space-y-3">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Emblem" class="h-12 w-auto mx-auto rounded shadow-sm" />
+            <h4 class="font-teko text-3xl text-brand-ink uppercase leading-none">Experience Born2Fit</h4>
+            <p class="text-[11px] text-brand-inkMuted">Visit us at Gouranganagar for a full facility walkthrough.</p>
+            <button onclick="openModal('Book Facility Tour')" class="bg-brand-ink text-brand-creme text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded">
+              Book A Gym Tour
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQs Section -->
+  <section id="faq" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Everything You Need To Know</span>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left font-bold text-sm text-brand-ink">
+            <span>What are the exact operating timings of Born2Fit?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition transform"></i>
+          </button>
+          <div class="hidden mt-3 text-xs text-brand-inkMuted leading-relaxed border-t border-brand-cremeBorder pt-3">
+            Born2Fit is open 7 days a week from <strong>6:00 AM to 10:00 PM</strong> (Monday through Sunday), allowing you to train seamlessly according to your morning or late evening schedules.
+          </div>
+        </div>
+
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left font-bold text-sm text-brand-ink">
+            <span>How can I book 1-on-1 Personal Training with Mr. Jit Das or Suman?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition transform"></i>
+          </button>
+          <div class="hidden mt-3 text-xs text-brand-inkMuted leading-relaxed border-t border-brand-cremeBorder pt-3">
+            You can book directly by clicking the <strong>"Enroll"</strong> or <strong>"Book Trainer"</strong> buttons on this page, or connect instantly over WhatsApp with our personal training desk to secure an available slot.
+          </div>
+        </div>
+
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left font-bold text-sm text-brand-ink">
+            <span>Where is the gym located and is parking available?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition transform"></i>
+          </button>
+          <div class="hidden mt-3 text-xs text-brand-inkMuted leading-relaxed border-t border-brand-cremeBorder pt-3">
+            We are located right on Gouranganagar Main Road, Kolkata - 700159 (conveniently accessible from Rajarhat, Baguiati, and New Town). Dedicated two-wheeler and four-wheeler parking is available on-premise.
+          </div>
+        </div>
+
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left font-bold text-sm text-brand-ink">
+            <span>Do you provide customized diet and nutrition plans?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition transform"></i>
+          </button>
+          <div class="hidden mt-3 text-xs text-brand-inkMuted leading-relaxed border-t border-brand-cremeBorder pt-3">
+            Yes. All personal training packages include comprehensive macro and calorie distribution charts tailored specifically to your metabolic rate, lifestyle, and local Indian/Bengali food preferences.
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Pricing Plans -->
-  <section id="plans" class="py-24 border-b border-brand-cremeBorder">
+  <section id="plans" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
         <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Membership Tiers</span>
         <h2 class="font-teko text-5xl text-brand-ink uppercase">Investment In Strength</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Monthly -->
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-8 flex flex-col justify-between hover:border-brand-ink transition shadow-lg">
           <div class="space-y-4">
@@ -744,7 +970,7 @@
   </section>
 
   <!-- Location Section -->
-  <section id="contact" class="py-24 border-b border-brand-cremeBorder bg-brand-cremeDark/30">
+  <section id="contact" class="py-24 border-b border-brand-cremeBorder">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
@@ -980,185 +1206,24 @@
       rec.classList.add('flex');
     }
 
-    // 5. 1RM & Barbell Plate Math
-    function calculate1RM() {
-      const weight = parseFloat(document.getElementById('liftWeight').value) || 0;
-      const reps = parseInt(document.getElementById('liftReps').value) || 1;
+    // 5. Interactive FAQ Toggle
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('i');
+      const isHidden = answer.classList.contains('hidden');
 
-      const oneRM = reps === 1 ? weight : Math.round(weight * (1 + (reps / 30)));
-      document.getElementById('oneRepMaxDisplay').innerText = `${oneRM} kg`;
-      document.getElementById('p90').innerText = `${Math.round(oneRM * 0.9)} kg`;
-      document.getElementById('p80').innerText = `${Math.round(oneRM * 0.8)} kg`;
-      document.getElementById('p70').innerText = `${Math.round(oneRM * 0.7)} kg`;
-
-      let weightPerSide = Math.max(0, (weight - 20) / 2);
-      let plates = [];
-      [20, 10, 5, 2.5, 1.25].forEach(plate => {
-        const count = Math.floor(weightPerSide / plate);
-        if (count > 0) {
-          plates.push(`${count}x ${plate}kg`);
-          weightPerSide -= count * plate;
-        }
+      document.querySelectorAll('#faq .space-y-4 > div').forEach(item => {
+        item.querySelector('div').classList.add('hidden');
+        item.querySelector('i').classList.remove('rotate-180');
       });
-      document.getElementById('plateMathDisplay').innerText = plates.length ? plates.join(', ') : 'Barbell only (20kg)';
-    }
-    calculate1RM();
 
-    // 6. Workout Vault Matrix
-    const routines = {
-      push: [
-        { name: "Incline Barbell Bench Press", sets: "4 Sets", reps: "8-10 Reps", focus: "Upper Clavicular Chest" },
-        { name: "Flat Dumbbell Press", sets: "3 Sets", reps: "10-12 Reps", focus: "Mid Chest Mass" },
-        { name: "Standing Overhead Dumbbell Press", sets: "4 Sets", reps: "8-10 Reps", focus: "Anterior Deltoids" },
-        { name: "Cable Lateral Raises", sets: "4 Sets", reps: "15 Reps", focus: "Lateral Deltoids" },
-        { name: "Overhead Rope Tricep Extensions", sets: "3 Sets", reps: "12-15 Reps", focus: "Triceps Long Head" }
-      ],
-      pull: [
-        { name: "Conventional Barbell Deadlifts", sets: "4 Sets", reps: "5-6 Reps", focus: "Posterior Chain & Traps" },
-        { name: "Lat Pulldowns (Neutral Grip)", sets: "4 Sets", reps: "10-12 Reps", focus: "Latissimus Dorsi" },
-        { name: "Chest-Supported T-Bar Rows", sets: "4 Sets", reps: "8-10 Reps", focus: "Mid-Back Density" },
-        { name: "Incline Dumbbell Bicep Curls", sets: "3 Sets", reps: "12 Reps", focus: "Bicep Peak Isolation" },
-        { name: "Face Pulls with External Rotation", sets: "4 Sets", reps: "15 Reps", focus: "Rear Delts & Rotator Cuff" }
-      ],
-      legs: [
-        { name: "Barbell Back Squats", sets: "4 Sets", reps: "6-8 Reps", focus: "Quadriceps & Glutes" },
-        { name: "Romanian Deadlifts (Dumbbell)", sets: "4 Sets", reps: "10 Reps", focus: "Hamstrings & Lower Back" },
-        { name: "Leg Press (Mid-Stance)", sets: "3 Sets", reps: "12-15 Reps", focus: "Quad Hypertrophy" },
-        { name: "Standing Calf Raises", sets: "4 Sets", reps: "15-20 Reps", focus: "Gastrocnemius" },
-        { name: "Hanging Leg Raises", sets: "3 Sets", reps: "15 Reps", focus: "Core & Abdominals" }
-      ]
-    };
-
-    function renderRoutine(type) {
-      document.querySelectorAll('.routine-tab').forEach(t => {
-        t.className = "routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted";
-      });
-      document.getElementById(`tab-${type}`).className = "routine-tab px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-brand-ink text-brand-creme";
-
-      const list = routines[type];
-      const html = list.map(item => `
-        <div class="p-4 bg-brand-cremeCard rounded-xl border border-brand-cremeBorder flex items-center justify-between hover:border-brand-ink transition shadow-sm">
-          <div>
-            <h4 class="text-brand-ink font-semibold text-sm">${item.name}</h4>
-            <span class="text-[10px] text-brand-inkMuted font-semibold uppercase tracking-wider">${item.focus}</span>
-          </div>
-          <div class="text-right">
-            <div class="text-xs font-bold text-brand-ink">${item.sets}</div>
-            <div class="text-[11px] text-brand-inkMuted">${item.reps}</div>
-          </div>
-        </div>
-      `).join('');
-      document.getElementById('routineDisplay').innerHTML = html;
-    }
-    renderRoutine('push');
-
-    // 7. Audio-Visual Rest Timer
-    let timerDuration = 60;
-    let timerRemaining = 60;
-    let timerInterval = null;
-    let audioCtx = null;
-
-    function playBeep(freq, duration) {
-      try {
-        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.frequency.value = freq;
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
-        osc.stop(audioCtx.currentTime + duration);
-      } catch(e) {}
-    }
-
-    function updateTimerDisplay() {
-      const mins = String(Math.floor(timerRemaining / 60)).padStart(2, '0');
-      const secs = String(timerRemaining % 60).padStart(2, '0');
-      document.getElementById('timerDisplay').innerText = `${mins}:${secs}`;
-    }
-
-    function setRestTime(seconds) {
-      clearInterval(timerInterval);
-      timerInterval = null;
-      timerDuration = seconds;
-      timerRemaining = seconds;
-      updateTimerDisplay();
-      document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Start Rest';
-      document.getElementById('timerStatus').innerText = "Ready";
-    }
-
-    function toggleTimer() {
-      if (timerInterval) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-        document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Resume';
-        document.getElementById('timerStatus').innerText = "Paused";
-      } else {
-        document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-pause mr-1"></i> Pause';
-        document.getElementById('timerStatus').innerText = "Resting...";
-        timerInterval = setInterval(() => {
-          if (timerRemaining > 0) {
-            timerRemaining--;
-            updateTimerDisplay();
-            if (timerRemaining <= 3 && timerRemaining > 0) playBeep(480, 0.1);
-          } else {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            playBeep(880, 0.4);
-            document.getElementById('timerStatus').innerText = "Interval Finished";
-            document.getElementById('startTimerBtn').innerHTML = '<i class="fa-solid fa-rotate-left mr-1"></i> Restart';
-          }
-        }, 1000);
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
       }
     }
 
-    function resetTimer() {
-      setRestTime(timerDuration);
-    }
-
-    // 8. Bengali Diet Swaps
-    const dietData = {
-      nonveg: [
-        { meal: "Post-Workout Breakfast", items: "4 Whole Eggs (Boiled/Poached) + 2 Slices Multigrain Toast", protein: "24g Protein", cal: "320 kcal" },
-        { meal: "Bengali Lean Lunch", items: "150g Chicken Breast (Light Curry) + Steamed Rice + Salad", protein: "42g Protein", cal: "480 kcal" },
-        { meal: "High Protein Dinner", items: "200g Katla / Rohu Fish Steak + 2 Handmade Roti", protein: "36g Protein", cal: "410 kcal" }
-      ],
-      veg: [
-        { meal: "Morning Super-Shake", items: "50g Chana Sattu Drink + Roasted Jeera + Lemon Water", protein: "14g Protein", cal: "210 kcal" },
-        { meal: "Vegetarian Power Lunch", items: "150g Fresh Low-Fat Paneer Curry + Dal + 2 Multigrain Roti", protein: "32g Protein", cal: "460 kcal" },
-        { meal: "Recovery Dinner", items: "1 Cup Boiled Soybean Chunks + Mixed Vegetable Khichdi", protein: "35g Protein", cal: "420 kcal" }
-      ]
-    };
-
-    function switchDietTab(type) {
-      const btnNV = document.getElementById('btnNonVeg');
-      const btnV = document.getElementById('btnVeg');
-      if (type === 'nonveg') {
-        btnNV.className = "px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md";
-        btnV.className = "px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition";
-      } else {
-        btnV.className = "px-6 py-2.5 rounded-lg bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest transition shadow-md";
-        btnNV.className = "px-6 py-2.5 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder text-brand-inkMuted text-xs font-bold uppercase tracking-widest transition";
-      }
-
-      const items = dietData[type];
-      document.getElementById('dietGrid').innerHTML = items.map(d => `
-        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-5 flex flex-col justify-between shadow-sm">
-          <div>
-            <span class="text-brand-ink text-[10px] font-bold uppercase tracking-widest">${d.meal}</span>
-            <p class="text-brand-ink text-sm font-medium mt-2">${d.items}</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-brand-cremeBorder flex justify-between text-xs font-bold">
-            <span class="text-brand-ink">${d.protein}</span>
-            <span class="text-brand-inkMuted">${d.cal}</span>
-          </div>
-        </div>
-      `).join('');
-    }
-    switchDietTab('nonveg');
-
-    // 9. Modal Management
+    // 6. Modal Management
     function openModal(plan) {
       document.getElementById('selectedPlan').value = plan;
       document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born2Fit';
