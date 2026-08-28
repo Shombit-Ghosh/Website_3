@@ -132,7 +132,7 @@
       <div class="text-[11px] text-brand-inkMuted font-medium">
         <i class="fa-solid fa-comment-dots text-brand-ink mr-1"></i> Direct Inquiries
       </div>
-      <a href="https://wa.me/919876543210?text=Hi%20Born2Fit,%20I%20want%20to%20inquire%20about%20personal%20training%20at%20Gouranganagar" target="_blank" class="w-full bg-brand-ink text-white text-xs font-bold uppercase tracking-wider py-3 rounded flex items-center justify-center gap-2 hover:bg-black transition shadow-md">
+      <a href="https://wa.me/919907464271?text=Hi%20Born2Fit,%20I%20want%20to%20inquire%20about%20personal%20training%20at%20Gouranganagar" target="_blank" class="w-full bg-brand-ink text-white text-xs font-bold uppercase tracking-wider py-3 rounded flex items-center justify-center gap-2 hover:bg-black transition shadow-md">
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Personal Trainers
       </a>
     </div>
@@ -367,7 +367,7 @@
           <button onclick="openModal('1-on-1 PT with Mr. Jit Das (Mr. India)')" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md text-center">
             Train with Mr. Jit Das
           </button>
-          <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20am%20interested%20in%20personal%20training%20at%20Born2Fit%20Gouranganagar" target="_blank" class="w-full border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition text-center flex items-center justify-center gap-2 shadow-sm">
+          <a href="https://wa.me/919907464271?text=Hi%20Mr.%20Jit%20Das,%20I%20am%20interested%20in%20personal%20training%20at%20Born2Fit%20Gouranganagar" target="_blank" class="w-full border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition text-center flex items-center justify-center gap-2 shadow-sm">
             <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Mr. Jit Das
           </a>
         </div>
@@ -428,7 +428,7 @@
             <button onclick="openModal('Personal Training with Mr. Jit Das')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Mr. Jit Das
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919907464271?text=Hi%20Mr.%20Jit%20Das,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -470,7 +470,7 @@
             <button onclick="openModal('Personal Training with Suman')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
               Book Suman
             </button>
-            <a href="https://wa.me/919876543210?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
+            <a href="https://wa.me/919907464271?text=Hi%20Suman,%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
             </a>
           </div>
@@ -1335,15 +1335,15 @@
         <input type="hidden" id="selectedPlan" />
         <div>
           <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Your Full Name</label>
-          <input type="text" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. Joydeep Sen" />
+          <input type="text" id="modalUserName" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. Joydeep Sen" />
         </div>
         <div>
           <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Phone / WhatsApp</label>
-          <input type="tel" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. +91 98300 XXXXX" />
+          <input type="tel" id="modalUserPhone" required class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none" placeholder="e.g. +91 98300 XXXXX" />
         </div>
         <div>
           <label class="block text-xs uppercase font-bold text-brand-inkMuted mb-1">Select Trainer & Interest</label>
-          <select class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none">
+          <select id="modalUserInterest" class="w-full bg-brand-creme border border-brand-cremeBorder rounded-lg px-3 py-2.5 text-brand-ink text-sm focus:border-brand-ink focus:outline-none">
             <option>1-on-1 PT with Mr. Jit Das (Mr. India)</option>
             <option>1-on-1 PT with Suman</option>
             <option>Goal Timeline Transformation</option>
@@ -1359,6 +1359,9 @@
 
   <!-- JavaScript Engine -->
   <script>
+    // Global WhatsApp Contact Number
+    const GYM_WHATSAPP_NUMBER = "919907464271";
+
     // 1. Navigation Drawer Toggle
     function toggleDrawer() {
       const drawer = document.getElementById('navDrawer');
@@ -1520,7 +1523,7 @@
       }
     }
 
-    // 7. Modal Management
+    // 7. Modal Management & WhatsApp Direct Redirection
     function openModal(plan) {
       document.getElementById('selectedPlan').value = plan;
       document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born2Fit';
@@ -1537,7 +1540,20 @@
 
     function handleFormSubmit(e) {
       e.preventDefault();
-      alert('Thank you. Our personal training team (Mr. Jit Das & Suman) will contact you directly.');
+      const plan = document.getElementById('selectedPlan').value || 'General Enrollment';
+      const name = document.getElementById('modalUserName').value.trim();
+      const phone = document.getElementById('modalUserPhone').value.trim();
+      const interest = document.getElementById('modalUserInterest').value;
+
+      const message = `Hello Born2Fit! I would like to enroll/inquire:%0A` +
+                      `• Name: ${encodeURIComponent(name)}%0A` +
+                      `• Phone: ${encodeURIComponent(phone)}%0A` +
+                      `• Interested In: ${encodeURIComponent(interest)}%0A` +
+                      `• Selected Plan/Topic: ${encodeURIComponent(plan)}%0A` +
+                      `Please confirm trainer availability at Gouranganagar branch.`;
+
+      const whatsappUrl = `https://wa.me/${GYM_WHATSAPP_NUMBER}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
       closeModal();
     }
   </script>
