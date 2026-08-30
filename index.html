@@ -165,6 +165,9 @@
         <a href="#pt-articles" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-book-open-reader text-brand-ink w-5 text-center"></i> Training Knowledge Hub
         </a>
+        <a href="#training-sessions" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder text-brand-ink font-bold">
+          <i class="fa-solid fa-play text-brand-ink w-5 text-center"></i> Training Sessions (1-on-1)
+        </a>
         <a href="#transformations" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-arrow-trend-up text-brand-ink w-5 text-center"></i> Member Transformations
         </a>
@@ -346,7 +349,7 @@
           </div>
         </div>
 
-        <!-- Photo 2: Bengal Icon Award Stage & Recognition -->
+        <!-- Photo 2: Bengal Icon Award Stage & Recognition (No black border, matches theme border) -->
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-3 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
           <div class="relative aspect-[3/4] bg-neutral-950 rounded-xl overflow-hidden mb-3">
             <img 
@@ -831,6 +834,92 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Training Sessions Section (1-on-1 PT Videos with Mr. Jit Das) -->
+  <section id="training-sessions" class="py-24 border-b border-brand-cremeBorder">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center space-y-3 mb-16">
+        <div class="inline-flex items-center justify-center gap-2 mb-1">
+          <div class="logo-metallic-container logo-pulse-glow h-7 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-5 w-auto object-contain" />
+          </div>
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Floor Coaching In Action</span>
+        </div>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">1-on-1 Training Sessions</h2>
+        <p class="text-brand-inkMuted text-sm max-w-2xl mx-auto font-normal">
+          Watch Mr. India Jit Das in active personal training sessions—guiding active mechanical tension, elbow positioning, tempo control, and zero-injury execution.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Video 1: Tricep Pushdown & Core Stabilization -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-5 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
+          <div class="space-y-4">
+            <div class="relative aspect-[9/16] max-h-[520px] w-full mx-auto bg-black rounded-xl overflow-hidden border border-brand-cremeBorder shadow-inner">
+              <video 
+                controls 
+                preload="metadata" 
+                class="w-full h-full object-cover"
+              >
+                <source src="input_file_0.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-ink border border-brand-cremeBorder px-2.5 py-0.5 rounded bg-brand-cremeDark">Cable Biomechanics</span>
+                <span class="text-[11px] font-bold text-brand-inkMuted">Coach: Mr. Jit Das</span>
+              </div>
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight pt-1">Tricep Pushdown & Elbow Fixation</h3>
+              <p class="text-xs text-brand-inkMuted leading-relaxed">
+                Coach Jit Das guides strict elbow isolation, concentric peak contractions, controlled negative eccentric cadence, and coordinated breathing during cable pushdowns.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-brand-cremeBorder flex items-center justify-between">
+            <span class="text-[11px] font-bold text-brand-ink">Live 1-on-1 Floor Cueing</span>
+            <button onclick="openModal('1-on-1 Training Session Inquiry')" class="text-xs uppercase font-bold text-brand-ink hover:underline">
+              Train Like This &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 2: Cable Fly & Upper Body Trajectory -->
+        <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-5 shadow-xl flex flex-col justify-between hover:border-brand-ink transition group">
+          <div class="space-y-4">
+            <div class="relative aspect-[9/16] max-h-[520px] w-full mx-auto bg-black rounded-xl overflow-hidden border border-brand-cremeBorder shadow-inner">
+              <video 
+                controls 
+                preload="metadata" 
+                class="w-full h-full object-cover"
+              >
+                <source src="input_file_1.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-ink border border-brand-cremeBorder px-2.5 py-0.5 rounded bg-brand-cremeDark">Chest & Shoulder Drive</span>
+                <span class="text-[11px] font-bold text-brand-inkMuted">Coach: Mr. Jit Das</span>
+              </div>
+              <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight pt-1">Cable Crossover & Active Tension Drive</h3>
+              <p class="text-xs text-brand-inkMuted leading-relaxed">
+                Hands-on manual stabilization across shoulder and scapular planes to maximize mechanical tension through full ranges of motion without joint strain.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-brand-cremeBorder flex items-center justify-between">
+            <span class="text-[11px] font-bold text-brand-ink">Live 1-on-1 Floor Cueing</span>
+            <button onclick="openModal('1-on-1 Training Session Inquiry')" class="text-xs uppercase font-bold text-brand-ink hover:underline">
+              Train Like This &rarr;
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
