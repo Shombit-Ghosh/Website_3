@@ -72,6 +72,58 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    /* Premium Metallic Gold Shimmer & Pulse Animation for B2F Logo */
+    .logo-metallic-container {
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+    }
+
+    .logo-metallic-container::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -150%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 10%,
+        rgba(255, 255, 255, 0.3) 30%,
+        rgba(212, 175, 55, 0.6) 50%,
+        rgba(255, 255, 255, 0.3) 70%,
+        rgba(255, 255, 255, 0) 90%
+      );
+      transform: rotate(25deg);
+      animation: goldSheen 4.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .logo-pulse-glow {
+      animation: goldBreathingGlow 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes goldSheen {
+      0% { left: -150%; }
+      35% { left: 160%; }
+      100% { left: 160%; }
+    }
+
+    @keyframes goldBreathingGlow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+      50% {
+        box-shadow: 0 0 16px 3px rgba(212, 175, 55, 0.4), 0 4px 14px rgba(0, 0, 0, 0.15);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+    }
   </style>
 </head>
 <body class="bg-brand-creme text-brand-ink font-jakarta selection:bg-brand-ink selection:text-brand-creme antialiased contour-creme-bg">
@@ -83,7 +135,9 @@
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-brand-cremeBorder">
         <a href="#" class="flex items-center gap-3">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-10 w-auto rounded object-contain" />
+          <div class="logo-metallic-container logo-pulse-glow border border-brand-gold/40">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-10 w-auto object-contain" />
+          </div>
           <span class="font-teko text-3xl tracking-widest text-brand-ink uppercase">Born<span class="font-light text-brand-inkMuted">2Fit</span></span>
         </a>
         <button onclick="toggleDrawer()" class="w-8 h-8 rounded bg-brand-cremeDark border border-brand-cremeBorder text-brand-ink hover:bg-brand-ink hover:text-white flex items-center justify-center transition">
@@ -150,7 +204,9 @@
         </button>
 
         <a href="#" class="flex items-center gap-3 group">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Official Logo" class="h-10 sm:h-12 w-auto rounded shadow-sm group-hover:scale-105 transition" />
+          <div class="logo-metallic-container logo-pulse-glow border border-brand-gold/40">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Official Logo" class="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition" />
+          </div>
           <span class="font-teko text-3xl sm:text-4xl tracking-widest text-brand-ink uppercase">Born<span class="font-light text-brand-inkMuted">2Fit</span></span>
         </a>
       </div>
@@ -174,7 +230,9 @@
       <div class="lg:col-span-7 space-y-6">
         
         <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-cremeBorder text-brand-ink text-xs uppercase tracking-widest bg-brand-cremeCard font-semibold shadow-sm">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="B2F Icon" class="h-4 w-auto rounded-sm" />
+          <div class="logo-metallic-container rounded-sm overflow-hidden h-4 w-4">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="B2F Icon" class="h-full w-full object-cover" />
+          </div>
           <span>Gouranganagar, Kolkata</span>
         </div>
         
@@ -221,7 +279,9 @@
           <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent"></div>
           <div class="absolute bottom-5 inset-x-5 p-4 rounded-xl bg-brand-creme/95 border border-brand-cremeBorder backdrop-blur-md shadow-lg">
             <div class="flex items-center gap-3">
-              <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="B2F Badge" class="w-10 h-10 object-contain rounded border border-brand-cremeBorder bg-brand-cremeDark p-1" />
+              <div class="logo-metallic-container logo-pulse-glow w-10 h-10 border border-brand-gold/40 bg-brand-cremeDark p-0.5">
+                <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="B2F Badge" class="w-full h-full object-contain" />
+              </div>
               <div>
                 <p class="text-[10px] text-brand-inkMuted font-bold uppercase tracking-widest">Born2Fit • Gouranganagar</p>
                 <p class="text-brand-ink text-xs font-semibold">Mentorship by Mr. India Jit Das & Suman</p>
@@ -381,7 +441,9 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
         <div class="inline-flex items-center justify-center gap-2 mb-1">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-6 w-auto rounded" />
+          <div class="logo-metallic-container logo-pulse-glow h-7 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-5 w-auto object-contain" />
+          </div>
           <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Elite Mentorship Team</span>
         </div>
         <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Personal Trainers</h2>
@@ -647,7 +709,9 @@
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
           <div class="inline-flex items-center gap-2 mb-2">
-            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Icon" class="h-5 w-auto rounded" />
+            <div class="logo-metallic-container rounded h-5 w-5 overflow-hidden">
+              <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Icon" class="h-full w-full object-cover" />
+            </div>
             <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Evidence-Based Coaching</span>
           </div>
           <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Personal Training Insights & Articles</h2>
@@ -766,7 +830,9 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
         <div class="inline-flex items-center justify-center gap-2 mb-1">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-6 w-auto rounded" />
+          <div class="logo-metallic-container logo-pulse-glow h-7 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-5 w-auto object-contain" />
+          </div>
           <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Real Results</span>
         </div>
         <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Verified Member Transformations</h2>
@@ -1044,7 +1110,9 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center space-y-3 mb-16">
         <div class="inline-flex items-center justify-center gap-2 mb-1">
-          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Logo" class="h-6 w-auto rounded" />
+          <div class="logo-metallic-container logo-pulse-glow h-7 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Logo" class="h-5 w-auto object-contain" />
+          </div>
           <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Facility Showcase</span>
         </div>
         <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Inside Born2Fit</h2>
@@ -1124,7 +1192,9 @@
         <!-- Card 6: Tour Call-to-Action -->
         <div class="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard shadow-lg group flex items-center justify-center p-6 text-center bg-brand-creme">
           <div class="space-y-3">
-            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Emblem" class="h-12 w-auto mx-auto rounded shadow-sm" />
+            <div class="logo-metallic-container logo-pulse-glow h-14 w-14 mx-auto border border-brand-gold/40 bg-brand-cremeCard p-1">
+              <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Emblem" class="h-full w-full object-contain" />
+            </div>
             <h4 class="font-teko text-3xl text-brand-ink uppercase leading-none">Experience Born2Fit</h4>
             <p class="text-[11px] text-brand-inkMuted leading-relaxed">Visit us at Gouranganagar for a complete facility tour and personalized movement evaluation.</p>
             <button onclick="openModal('Book Facility Tour')" class="bg-brand-ink hover:bg-black text-brand-creme text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 rounded transition shadow-md">
@@ -1261,7 +1331,9 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
           <div class="flex items-center gap-3">
-            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-8 w-auto rounded" />
+            <div class="logo-metallic-container logo-pulse-glow h-9 px-1 border border-brand-gold/40 bg-brand-cremeCard">
+              <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-7 w-auto object-contain" />
+            </div>
             <span class="text-xs uppercase font-bold tracking-widest text-brand-inkMuted">Gym Location</span>
           </div>
           <h2 class="font-teko text-5xl text-brand-ink uppercase">Born2Fit Gouranganagar</h2>
@@ -1294,7 +1366,9 @@
 
         <div class="h-80 rounded-2xl overflow-hidden border border-brand-cremeBorder bg-brand-cremeCard flex items-center justify-center p-6 text-center shadow-xl">
           <div class="space-y-3">
-            <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Center" class="h-16 w-auto mx-auto rounded shadow" />
+            <div class="logo-metallic-container logo-pulse-glow h-20 w-20 mx-auto border border-brand-gold/40 bg-brand-cremeCard p-1">
+              <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Center" class="h-full w-full object-contain" />
+            </div>
             <h4 class="font-bold text-brand-ink text-lg">Gouranganagar Main Branch</h4>
             <p class="text-xs text-brand-inkMuted max-w-xs mx-auto">Equipped with dedicated parking spaces.</p>
             <a href="https://maps.google.com/?q=Gouranganagar+Kolkata" target="_blank" class="inline-block bg-brand-ink hover:bg-black text-brand-creme text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded-lg transition shadow-md">
@@ -1310,7 +1384,9 @@
   <footer class="py-10 text-center text-xs text-brand-inkMuted bg-brand-cremeDark/80">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-3">
-        <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-8 w-auto rounded shadow-sm" />
+        <div class="logo-metallic-container logo-pulse-glow h-9 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-7 w-auto object-contain" />
+        </div>
         <span class="font-teko text-2xl tracking-widest text-brand-ink uppercase">Born<span class="font-light text-brand-inkMuted">2Fit</span></span>
       </div>
       <p>&copy; Born2Fit. All rights reserved. Gouranganagar, Kolkata - 700159.</p>
@@ -1326,7 +1402,9 @@
       </button>
 
       <div class="flex items-center gap-3 mb-2">
-        <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Logo" class="h-8 w-auto rounded" />
+        <div class="logo-metallic-container logo-pulse-glow h-9 px-1.5 border border-brand-gold/40 bg-brand-cremeCard">
+          <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit Logo" class="h-7 w-auto object-contain" />
+        </div>
         <h3 class="font-teko text-3xl text-brand-ink uppercase" id="modalTitle">Get Started</h3>
       </div>
       <p class="text-xs text-brand-inkMuted mb-6">Our personal trainers will connect directly regarding availability.</p>
