@@ -131,9 +131,10 @@
   <!-- Left Drawer Navigation -->
   <div id="drawerOverlay" onclick="toggleDrawer()" class="fixed inset-0 bg-brand-ink/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
   
-  <aside id="navDrawer" class="fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-brand-creme border-r border-brand-cremeBorder z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 shadow-2xl">
-    <div>
-      <div class="flex items-center justify-between pb-6 border-b border-brand-cremeBorder">
+  <aside id="navDrawer" class="fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-brand-creme border-r border-brand-cremeBorder z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl overflow-hidden">
+    <!-- Header (Fixed Top) -->
+    <div class="p-6 pb-4 border-b border-brand-cremeBorder shrink-0">
+      <div class="flex items-center justify-between">
         <a href="#" class="flex items-center gap-3">
           <div class="logo-metallic-container logo-pulse-glow border border-brand-gold/40">
             <img src="WhatsApp Image 2026-08-25 at 10.24.10 PM.jpeg" alt="Born2Fit B2F Logo" class="h-10 w-auto object-contain" />
@@ -144,8 +145,11 @@
           <i class="fa-solid fa-xmark text-sm"></i>
         </button>
       </div>
+    </div>
 
-      <nav class="flex flex-col gap-1 mt-6 font-semibold text-xs uppercase tracking-widest text-brand-inkMuted">
+    <!-- Scrollable Navigation Area -->
+    <div class="flex-1 overflow-y-auto px-6 py-4 space-y-6">
+      <nav class="flex flex-col gap-1 font-semibold text-xs uppercase tracking-widest text-brand-inkMuted">
         <a href="#owner" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-medal text-brand-ink w-5 text-center"></i> Founder (Mr. India)
         </a>
@@ -180,9 +184,39 @@
           <i class="fa-solid fa-location-dot text-brand-ink w-5 text-center"></i> Gouranganagar Gym
         </a>
       </nav>
+
+      <!-- Quick Info Cards (Location & Operating Hours) -->
+      <div class="pt-4 border-t border-brand-cremeBorder space-y-3">
+        <!-- Location Card -->
+        <a href="#contact" onclick="toggleDrawer()" class="p-3.5 rounded-xl bg-brand-cremeDark/70 border border-brand-cremeBorder hover:border-brand-ink transition block group">
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder flex items-center justify-center text-brand-ink shrink-0 group-hover:bg-brand-ink group-hover:text-brand-creme transition">
+              <i class="fa-solid fa-map-location-dot text-xs"></i>
+            </div>
+            <div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-brand-ink">Gym Location</div>
+              <p class="text-[11px] text-brand-inkMuted leading-tight mt-0.5 font-normal">Gouranganagar Main Rd, Kolkata - 700159</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Operating Hours Card -->
+        <a href="#contact" onclick="toggleDrawer()" class="p-3.5 rounded-xl bg-brand-cremeDark/70 border border-brand-cremeBorder hover:border-brand-ink transition block group">
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-lg bg-brand-cremeCard border border-brand-cremeBorder flex items-center justify-center text-brand-ink shrink-0 group-hover:bg-brand-ink group-hover:text-brand-creme transition">
+              <i class="fa-solid fa-clock text-xs"></i>
+            </div>
+            <div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-brand-ink">Operating Hours</div>
+              <p class="text-[11px] text-brand-inkMuted leading-tight mt-0.5 font-normal">Mon – Sun: 6:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <div class="pt-6 border-t border-brand-cremeBorder space-y-3">
+    <!-- Footer (Fixed Bottom) -->
+    <div class="p-6 pt-4 border-t border-brand-cremeBorder space-y-3 shrink-0 bg-brand-creme">
       <div class="text-[11px] text-brand-inkMuted font-medium">
         <i class="fa-solid fa-comment-dots text-brand-ink mr-1"></i> Direct Inquiries
       </div>
