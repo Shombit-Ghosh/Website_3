@@ -103,6 +103,32 @@
       pointer-events: none;
     }
 
+    /* Enhanced JD Emblem Metallic & Glow Styling */
+    .jd-badge-enhanced {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      padding: 2.5px;
+      background: linear-gradient(135deg, #FAF7F2 0%, #D4AF37 50%, #997A15 100%);
+      box-shadow: 0 4px 14px -1px rgba(212, 175, 55, 0.45), 0 0 0 1.5px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    .jd-badge-enhanced:hover {
+      transform: scale(1.08) rotate(2deg);
+      box-shadow: 0 6px 20px 2px rgba(212, 175, 55, 0.65), 0 0 0 2px rgba(212, 175, 55, 0.6);
+    }
+
+    .jd-badge-enhanced img {
+      border-radius: 9999px;
+      object-fit: cover;
+      display: block;
+    }
+
     .logo-pulse-glow {
       animation: goldBreathingGlow 3.5s ease-in-out infinite alternate;
     }
@@ -252,7 +278,7 @@
         </h1>
         
         <p class="text-brand-inkMuted text-base sm:text-lg max-w-xl font-normal leading-relaxed">
-          <strong>Born2Fit</strong> is founded and spearheaded by <strong>Mr. Jeet Das (<span class="font-black text-brand-ink">JD</span>)</strong> (Owner & Mr. India) alongside personal trainer <strong>Suman</strong>. Master biomechanics, customized macro profiles, and progressive overload in New Town's premier fitness facility.
+          <strong>Born2Fit</strong> is founded and spearheaded by <span class="inline-flex items-center gap-2 align-middle"><strong>Mr. Jeet Das (<span class="font-black text-brand-ink">JD</span>)</strong> <span class="jd-badge-enhanced h-8 w-8 sm:h-9 sm:w-9 shadow-md"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Logo" class="h-full w-full" /></span></span> (Owner & Mr. India) alongside personal trainer <strong>Suman</strong>. Master biomechanics, customized macro profiles, and progressive overload in New Town's premier fitness facility.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-2">
@@ -295,7 +321,11 @@
               </div>
               <div>
                 <p class="text-[10px] text-brand-inkMuted font-bold uppercase tracking-widest">Born2Fit • New Town</p>
-                <p class="text-brand-ink text-xs font-semibold">Mentorship by Mr. India Jeet Das (<span class="font-bold text-brand-ink">JD</span>) & Suman</p>
+                <div class="flex items-center gap-2">
+                  <p class="text-brand-ink text-xs font-semibold">Mentorship by Mr. India Jeet Das (<span class="font-bold text-brand-ink">JD</span>)</p>
+                  <span class="jd-badge-enhanced h-6 w-6 shrink-0"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Badge" class="h-full w-full" /></span>
+                  <p class="text-brand-ink text-xs font-semibold">& Suman</p>
+                </div>
               </div>
             </div>
           </div>
@@ -316,9 +346,9 @@
           </div>
           <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase leading-none flex flex-wrap items-center gap-3">
             <span>Built by a Champion.</span>
-            <span class="text-brand-inkMuted font-light inline-flex items-center gap-3">
+            <span class="text-brand-inkMuted font-light inline-flex items-center gap-3.5">
               <span>Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) (Mr. India)</span>
-              <img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="Mr. Jeet Das JD Logo" class="h-10 sm:h-12 w-10 sm:w-12 rounded-full object-cover border-2 border-brand-gold/60 shadow-md inline" />
+              <span class="jd-badge-enhanced h-14 w-14 sm:h-16 sm:w-16 shadow-xl"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="Mr. Jeet Das JD Logo" class="h-full w-full" /></span>
             </span>
           </h2>
           <p class="text-xs text-brand-inkMuted font-semibold uppercase tracking-wider mt-2">
@@ -427,11 +457,12 @@
       <!-- Pedigree Highlights & Actions -->
       <div class="mt-10 bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-8 shadow-xl grid md:grid-cols-12 gap-8 items-center">
         <div class="md:col-span-8 space-y-4">
-          <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">
-            Championship-Level Mentorship Available at Born2Fit
+          <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none flex flex-wrap items-center gap-3">
+            <span>Championship-Level Mentorship Available at Born2Fit</span>
+            <span class="jd-badge-enhanced h-10 w-10 shadow-md"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Emblem" class="h-full w-full" /></span>
           </h3>
           <p class="text-brand-inkMuted text-sm leading-relaxed">
-            As a renowned <strong>Mr. India titleholder</strong> and <strong>Bengal Icon Award Coach of the Year</strong>, <strong>Mr. Jeet Das (<span class="font-bold text-brand-ink">JD</span>)</strong> applies championship methodologies to every client at Born2Fit New Town. From raw beginner strength building to extreme contest prep, his protocols prioritize joint safety, perfect muscular tension, and stage-proven nutritional science.
+            As a renowned <strong>Mr. India titleholder</strong> and <strong>Bengal Icon Award Coach of the Year</strong>, <strong>Mr. Jeet Das (<span class="font-bold text-brand-ink">JD</span>)</strong> <span class="jd-badge-enhanced h-6 w-6 align-middle"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Logo" class="h-full w-full" /></span> applies championship methodologies to every client at Born2Fit New Town. From raw beginner strength building to extreme contest prep, his protocols prioritize joint safety, perfect muscular tension, and stage-proven nutritional science.
           </p>
           <div class="flex flex-wrap gap-4 text-xs font-bold text-brand-ink pt-1">
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-xs"></i> National Titleholder Experience</span>
@@ -441,8 +472,9 @@
         </div>
         
         <div class="md:col-span-4 flex flex-col gap-3 justify-center">
-          <button onclick="openModal('1-on-1 PT with Mr. Jeet Das (JD) (Mr. India)')" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md text-center">
-            Train with Mr. Jeet Das (JD)
+          <button onclick="openModal('1-on-1 PT with Mr. Jeet Das (JD) (Mr. India)')" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md text-center flex items-center justify-center gap-2">
+            <span>Train with Mr. Jeet Das (JD)</span>
+            <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Icon" class="h-full w-full" /></span>
           </button>
           <a href="https://wa.me/919907464271?text=Hi%20Mr.%20Jeet%20Das%20(JD),%20I%20am%20interested%20in%20personal%20training%20at%20Born2Fit%20New%20Town" target="_blank" class="w-full border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition text-center flex items-center justify-center gap-2 shadow-sm">
             <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Mr. Jeet Das (JD)
@@ -487,9 +519,9 @@
 
             <div>
               <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2.5">
+                <div class="flex items-center gap-3">
                   <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</h3>
-                  <img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Logo Emblem" class="h-7 w-7 rounded-full object-cover border border-brand-gold/60 shadow-sm shrink-0" />
+                  <span class="jd-badge-enhanced h-10 w-10 sm:h-11 sm:w-11 shrink-0"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Logo Emblem" class="h-full w-full" /></span>
                 </div>
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-inkMuted border border-brand-cremeBorder px-2.5 py-0.5 rounded">Personal Trainer</span>
               </div>
@@ -507,8 +539,9 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-brand-cremeBorder flex gap-3">
-            <button onclick="openModal('Personal Training with Mr. Jeet Das (JD)')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md">
-              Book Mr. Jeet Das (JD)
+            <button onclick="openModal('Personal Training with Mr. Jeet Das (JD)')" class="flex-1 bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3 rounded-lg transition shadow-md flex items-center justify-center gap-2">
+              <span>Book Mr. Jeet Das (JD)</span>
+              <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD Logo Small" class="h-full w-full" /></span>
             </button>
             <a href="https://wa.me/919907464271?text=Hi%20Mr.%20Jeet%20Das%20(JD),%20I%20want%20to%20enroll%20in%20personal%20training" target="_blank" class="px-4 border border-brand-cremeBorder hover:border-brand-ink bg-brand-creme text-brand-ink flex items-center justify-center rounded-lg transition">
               <i class="fa-brands fa-whatsapp text-base"></i>
@@ -757,11 +790,11 @@
             <span class="px-3 py-1 bg-brand-cremeDark text-brand-ink text-[10px] font-bold uppercase rounded tracking-wider">Biomechanics</span>
             <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight">Why 1-on-1 Form Precision Breaks Muscle Plateaus</h3>
             <p class="text-xs text-brand-inkMuted leading-relaxed">
-              Moving weights without matching your limb levers and joint angles causes connective strain instead of targeted hypertrophy. Coach Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) and Suman correct minute foot angles, bar paths, and scapular retraction to ensure 100% mechanical tension lands on the target muscle.
+              Moving weights without matching your limb levers and joint angles causes connective strain instead of targeted hypertrophy. Coach Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5 align-middle"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span> and Suman correct minute foot angles, bar paths, and scapular retraction to ensure 100% mechanical tension lands on the target muscle.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
-            <span>By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</span>
+            <span class="inline-flex items-center gap-1.5">By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>
             <span class="text-brand-inkMuted">4 Min Read</span>
           </div>
         </div>
@@ -791,7 +824,7 @@
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
-            <span>By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</span>
+            <span class="inline-flex items-center gap-1.5">By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>
             <span class="text-brand-inkMuted">3 Min Read</span>
           </div>
         </div>
@@ -821,7 +854,7 @@
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-brand-cremeBorder flex items-center justify-between text-xs text-brand-ink font-semibold">
-            <span>By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</span>
+            <span class="inline-flex items-center gap-1.5">By Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>
             <span class="text-brand-inkMuted">5 Min Read</span>
           </div>
         </div>
@@ -857,7 +890,7 @@
         </div>
         <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">1-on-1 Training Sessions</h2>
         <p class="text-brand-inkMuted text-sm max-w-2xl mx-auto font-normal">
-          Watch Mr. India Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) in active personal training sessions—guiding active mechanical tension, elbow positioning, tempo control, and zero-injury execution.
+          Watch Mr. India Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-6 w-6 align-middle"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span> in active personal training sessions—guiding active mechanical tension, elbow positioning, tempo control, and zero-injury execution.
         </p>
       </div>
 
@@ -878,7 +911,7 @@
             <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold uppercase tracking-wider text-brand-ink border border-brand-cremeBorder px-2.5 py-0.5 rounded bg-brand-cremeDark">Cable Biomechanics</span>
-                <span class="text-[11px] font-bold text-brand-inkMuted">Coach: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</span>
+                <span class="text-[11px] font-bold text-brand-inkMuted inline-flex items-center gap-1.5">Coach: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>
               </div>
               <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight pt-1">Tricep Pushdown & Elbow Fixation</h3>
               <p class="text-xs text-brand-inkMuted leading-relaxed">
@@ -911,7 +944,7 @@
             <div class="space-y-1">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold uppercase tracking-wider text-brand-ink border border-brand-cremeBorder px-2.5 py-0.5 rounded bg-brand-cremeDark">Chest & Shoulder Drive</span>
-                <span class="text-[11px] font-bold text-brand-inkMuted">Coach: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</span>
+                <span class="text-[11px] font-bold text-brand-inkMuted inline-flex items-center gap-1.5">Coach: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>
               </div>
               <h3 class="font-teko text-3xl text-brand-ink uppercase leading-tight pt-1">Cable Crossover & Active Tension Drive</h3>
               <p class="text-xs text-brand-inkMuted leading-relaxed">
@@ -943,7 +976,7 @@
         </div>
         <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Verified Member Transformations</h2>
         <p class="text-brand-inkMuted text-sm max-w-2xl mx-auto font-normal">
-          Real athletes and daily gym members who sculpted their bodies under the guidance of Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) (Mr. India) and Suman at Born2Fit.
+          Real athletes and daily gym members who sculpted their bodies under the guidance of <span class="inline-flex items-center gap-1.5 align-middle">Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span> (Mr. India) and Suman at Born2Fit.
         </p>
       </div>
 
@@ -1105,7 +1138,7 @@
             </div>
             
             <p class="text-xs text-brand-inkMuted leading-relaxed">
-              Transformed from high body fat to ultra-dense vascularity, 6-pack serratus cuts, and stage-ready chest striations in 3 months of strict competition prep supervised by Mr. India Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>).
+              Transformed from high body fat to ultra-dense vascularity, 6-pack serratus cuts, and stage-ready chest striations in 3 months of strict competition prep supervised by <span class="inline-flex items-center gap-1.5 align-middle">Mr. India Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span>.
             </p>
           </div>
 
@@ -1143,7 +1176,7 @@
               <i class="fa-solid fa-star"></i>
             </div>
             <p class="text-xs text-brand-ink leading-relaxed font-medium">
-              "Having Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) (Mr. India) right on the floor guiding your posture and angles makes a massive difference. You simply don't get this level of expertise in typical gyms."
+              "Having <span class="inline-flex items-center gap-1.5 align-middle">Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span> (Mr. India) right on the floor guiding your posture and angles makes a massive difference. You simply don't get this level of expertise in typical gyms."
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-brand-cremeBorder flex items-center gap-3">
@@ -1335,7 +1368,7 @@
 
         <div class="bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-sm">
           <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left font-bold text-sm text-brand-ink">
-            <span>How can I book 1-on-1 Personal Training with Mr. Jeet Das (JD) or Suman?</span>
+            <span class="inline-flex items-center gap-1.5 flex-wrap">How can I book 1-on-1 Personal Training with Mr. Jeet Das (JD) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span> or Suman?</span>
             <i class="fa-solid fa-chevron-down text-xs transition transform"></i>
           </button>
           <div class="hidden mt-3 text-xs text-brand-inkMuted leading-relaxed border-t border-brand-cremeBorder pt-3">
@@ -1401,7 +1434,7 @@
             <h3 class="font-teko text-3xl text-brand-ink uppercase">1-on-1 Personal Training</h3>
             <div class="font-teko text-5xl font-bold text-brand-ink">Custom<span class="text-sm text-brand-inkMuted font-jakarta"> / Goal</span></div>
             <ul class="text-sm text-brand-ink space-y-2.5 pt-4 font-medium">
-              <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> <strong>Mentorship by Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) / Suman</strong></li>
+              <li class="flex items-center gap-1.5 flex-wrap"><i class="fa-solid fa-check text-brand-ink mr-1 text-xs"></i> <span>Mentorship by <strong>Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>)</strong></span> <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span> <span>/ Suman</span></li>
               <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Custom calorie & macro distribution</li>
               <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Strict biomechanics & form audit</li>
               <li><i class="fa-solid fa-check text-brand-ink mr-2 text-xs"></i> Weekly body-fat & caliper tracking</li>
@@ -1444,7 +1477,7 @@
           </div>
           <h2 class="font-teko text-5xl text-brand-ink uppercase">Born2Fit New Town</h2>
           <p class="text-brand-inkMuted text-sm font-normal leading-relaxed">
-            Conveniently situated in New Town, easily accessible from Baguiati, Rajarhat, and Salt Lake. Visit the gym to tour the equipment and meet Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) and Suman.
+            Conveniently situated in New Town, easily accessible from Baguiati, Rajarhat, and Salt Lake. Visit the gym to tour the equipment and meet <span class="inline-flex items-center gap-1.5 align-middle">Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-6 w-6"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span></span> and Suman.
           </p>
 
           <div class="space-y-4">
@@ -1496,7 +1529,7 @@
         <span class="font-teko text-2xl tracking-widest text-brand-ink uppercase">Born<span class="font-light text-brand-inkMuted">2Fit</span></span>
       </div>
       <p>&copy; Born2Fit. All rights reserved. New Town, Kolkata - 700159.</p>
-      <p>Owner & Personal Trainer: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) (Mr. India) | Personal Trainer: Suman</p>
+      <p class="inline-flex items-center gap-1.5 flex-wrap justify-center">Owner & Personal Trainer: Mr. Jeet Das (<strong class="text-brand-ink font-bold">JD</strong>) <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span> (Mr. India) | Personal Trainer: Suman</p>
     </div>
   </footer>
 
@@ -1534,8 +1567,9 @@
             <option>Gym Floor Access</option>
           </select>
         </div>
-        <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md">
-          Confirm Request
+        <button type="submit" class="w-full bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest py-3.5 rounded-lg transition shadow-md flex items-center justify-center gap-2">
+          <span>Confirm Request</span>
+          <span class="jd-badge-enhanced h-5 w-5"><img src="WhatsApp Image 2026-08-31 at 2.10.37 AM.jpeg" alt="JD" class="h-full w-full" /></span>
         </button>
       </form>
     </div>
