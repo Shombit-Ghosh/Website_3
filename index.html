@@ -172,6 +172,59 @@
 </head>
 <body class="bg-brand-creme text-brand-ink font-jakarta selection:bg-brand-ink selection:text-brand-creme antialiased contour-creme-bg relative">
 
+  <!-- ========================================== -->
+  <!-- NOTICEABLE POPUP ADVERTISEMENT AT THE BEGINNING -->
+  <!-- ========================================== -->
+  <div id="welcomePromoPopup" class="fixed inset-0 z-50 bg-brand-ink/60 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-brand-cremeCard border-2 border-brand-gold rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+      
+      <!-- Top Decorative Glow & Badge -->
+      <div class="absolute -right-16 -top-16 w-36 h-36 bg-brand-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <button onclick="closeWelcomePopup()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-cremeDark hover:bg-brand-ink hover:text-white text-brand-ink flex items-center justify-center transition shadow-sm">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-brand-ink text-brand-gold flex items-center justify-center text-2xl shadow-md shrink-0 border border-brand-gold/40">
+          <i class="fa-solid fa-fire animate-pulse"></i>
+        </div>
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-brand-gold bg-brand-ink px-2.5 py-0.5 rounded-full">New Town Flash Offer</span>
+          <h3 class="font-teko text-3xl sm:text-4xl text-brand-ink uppercase leading-none mt-1">Unlock 15% OFF + Free Form Audit!</h3>
+        </div>
+      </div>
+
+      <p class="text-xs text-brand-inkMuted leading-relaxed mb-5">
+        Welcome to <strong>Born2Fit</strong>! Special introductory concession supervised by Mr. India Jeet Das (<strong class="text-brand-ink">JD</strong>) and Suman. Claim your voucher before allocation closes.
+      </p>
+
+      <!-- Promo Code Highlight Box -->
+      <div class="p-4 rounded-2xl bg-brand-creme border border-brand-cremeBorder mb-6 flex items-center justify-between shadow-inner">
+        <div>
+          <span class="text-[9px] uppercase font-bold text-brand-inkMuted block">Your Exclusive Promo Code</span>
+          <span class="font-mono text-lg font-bold text-brand-ink tracking-wider select-all">B2FNEW15</span>
+        </div>
+        <div class="text-right">
+          <span class="text-[9px] uppercase font-bold text-brand-inkMuted block">Flash Countdown</span>
+          <span id="popupCountdown" class="font-teko text-xl font-bold text-brand-gold">03 : 59 : 24</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-3">
+        <a href="https://wa.me/919007586246?text=Hi%20Born2Fit,%20I%20am%20claiming%20my%20welcome%20offer%20using%20promo%20code%20B2FNEW15%20from%20your%20website%20popup" target="_blank" onclick="closeWelcomePopup()" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold uppercase text-xs tracking-wider py-4 rounded-xl transition shadow-lg flex items-center justify-center gap-2.5 group">
+          <i class="fa-brands fa-whatsapp text-lg group-hover:scale-110 transition-transform"></i>
+          <span>Redeem Offer via WhatsApp</span>
+        </a>
+        <button onclick="closeWelcomePopup()" class="w-full bg-brand-cremeDark hover:bg-brand-cremeBorder text-brand-ink font-bold uppercase text-xs tracking-widest py-3 rounded-xl transition">
+          Continue to Website
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Floating Real WhatsApp Quick Action Button (Direct Gym Desk) -->
   <a 
     href="https://wa.me/919007586246?text=Hi%20Born2Fit%20Team,%20I%20am%20interested%20in%20joining%20the%20gym%20and%20personal%20training%20at%20New%20Town" 
@@ -2190,7 +2243,29 @@
     }
     updateLiveStatus();
 
-    // 3. Goal Timeline Forecaster
+    // 3. Welcome Popup Advertisement Management
+    function closeWelcomePopup() {
+      const popup = document.getElementById('welcomePromoPopup');
+      if (popup) {
+        popup.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => popup.remove(), 300);
+      }
+    }
+
+    // Popup Countdown Timer Simulation
+    let popupSeconds = (3 * 3600) + (59 * 60) + 24;
+    setInterval(() => {
+      if (popupSeconds > 0) popupSeconds--;
+      const hrs = String(Math.floor(popupSeconds / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((popupSeconds % 3600) / 60)).padStart(2, '0');
+      const secs = String(popupSeconds % 60).padStart(2, '0');
+      const timerEl = document.getElementById('popupCountdown');
+      if (timerEl) {
+        timerEl.innerText = `${hrs} : ${mins} : ${secs}`;
+      }
+    }, 1000);
+
+    // 4. Goal Timeline Forecaster
     let currentDiscipline = 'strict';
     function setDiscipline(level, btn) {
       currentDiscipline = level;
@@ -2242,7 +2317,7 @@
     }
     updateForecaster();
 
-    // 4. Multi-Metric Health Engine
+    // 5. Multi-Metric Health Engine
     function calculateHealthMetrics(e) {
       e.preventDefault();
       const height = parseFloat(document.getElementById('userHeight').value);
@@ -2290,7 +2365,7 @@
       rec.classList.add('flex');
     }
 
-    // 5. Sliding Carousel for Articles
+    // 6. Sliding Carousel for Articles
     function slideArticles(direction) {
       const track = document.getElementById('articlesTrack');
       const scrollAmount = 380;
@@ -2301,7 +2376,7 @@
       }
     }
 
-    // 6. Interactive FAQ Toggle
+    // 7. Interactive FAQ Toggle
     function toggleFaq(button) {
       const answer = button.nextElementSibling;
       const icon = button.querySelector('i');
@@ -2318,7 +2393,7 @@
       }
     }
 
-    // 7. Running Advertisement Script & Countdown Timer
+    // 8. Running Advertisement Script & Countdown Timer for Bottom Section
     const promoMessages = [
       "⚡ LIVE DEAL: Use Code <span class='text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded'>B2FNEW15</span> for 15% OFF Annual Memberships!",
       "🔥 BUDDY PASS: Train with a friend using code <span class='text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded'>BUDDY20</span> to save 20% on 1-on-1 PT!",
@@ -2337,10 +2412,8 @@
         }, 200);
       }
     }
-    // Auto-rotate every 6 seconds
     setInterval(rotatePromoNotice, 6000);
 
-    // Countdown Timer simulation
     let totalSeconds = (4 * 3600) + (18 * 60) + 42;
     setInterval(() => {
       if (totalSeconds > 0) totalSeconds--;
@@ -2363,7 +2436,7 @@
       window.open(`https://wa.me/${GYM_WHATSAPP_NUMBER}?text=${msg}`, '_blank');
     }
 
-    // 8. Modal Management & WhatsApp Direct Redirection
+    // 9. Modal Management & WhatsApp Direct Redirection
     function openModal(plan) {
       document.getElementById('selectedPlan').value = plan;
       document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born2Fit';
