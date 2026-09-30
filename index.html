@@ -24,20 +24,20 @@
           },
           colors: {
             brand: {
-              creme: '#FAF7F2',       /* Primary Warm White/Creme Canvas */
-              cremeCard: '#FFFFFF',   /* Pure White Surfaces */
-              cremeDark: '#F2ECE1',   /* Soft Linen/Khaki Shade */
-              cremeBorder: '#E5DCCF', /* Gentle Luxury Contour Lines */
-              ink: '#121214',         /* Deep Pitch Black */
-              inkMuted: '#575760',    /* Refined Charcoal Grey */
-              inkLight: '#8C8C96',    /* Soft Subtle Grey */
-              gold: '#D4AF37',        /* Luxury Gold Accent */
+              creme: '#FAF7F2',        /* Primary Warm White/Creme Canvas */
+              cremeCard: '#FFFFFF',    /* Pure White Surfaces */
+              cremeDark: '#F2ECE1',    /* Soft Linen/Khaki Shade */
+              cremeBorder: '#E5DCCF',  /* Gentle Luxury Contour Lines */
+              ink: '#121214',          /* Deep Pitch Black */
+              inkMuted: '#575760',     /* Refined Charcoal Grey */
+              inkLight: '#8C8C96',     /* Soft Subtle Grey */
+              gold: '#D4AF37',         /* Luxury Gold Accent */
             },
             whatsapp: {
-              DEFAULT: '#25D366',     /* Official WhatsApp Vibrant Green */
-              dark: '#128C7E',        /* Deep WhatsApp Teal */
-              hover: '#1EBE5D',       /* Vibrant Green Hover */
-              subtle: '#DCF8C6',      /* Chat Bubble Subtle Green */
+              DEFAULT: '#25D366',      /* Official WhatsApp Vibrant Green */
+              dark: '#128C7E',         /* Deep WhatsApp Teal */
+              hover: '#1EBE5D',        /* Vibrant Green Hover */
+              subtle: '#DCF8C6',       /* Chat Bubble Subtle Green */
             }
           }
         }
@@ -248,11 +248,11 @@
         <a href="#plans" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
           <i class="fa-solid fa-gem text-brand-ink w-5 text-center"></i> Membership Tiers
         </a>
-        <a href="#contact" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-location-dot text-brand-ink w-5 text-center"></i> Gym Location
+        <a href="#offers" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder text-brand-ink font-bold">
+          <i class="fa-solid fa-tags text-emerald-600 w-5 text-center"></i> Special Offers
         </a>
         <a href="#contact" onclick="toggleDrawer()" class="p-3 rounded hover:bg-brand-cremeDark hover:text-brand-ink transition flex items-center gap-3 border border-transparent hover:border-brand-cremeBorder">
-          <i class="fa-solid fa-clock text-brand-ink w-5 text-center"></i> Operating Hours (Mon–Sat: 6AM – 10:30PM)
+          <i class="fa-solid fa-location-dot text-brand-ink w-5 text-center"></i> Gym Location
         </a>
       </nav>
     </div>
@@ -1799,6 +1799,168 @@
     </div>
   </section>
 
+  <!-- SPECIAL OFFERS & ADVERTISEMENT BANNER SECTION -->
+  <section id="offers" class="py-24 border-b border-brand-cremeBorder bg-gradient-to-b from-brand-cremeDark/50 via-brand-creme to-brand-cremeDark/30 relative overflow-hidden">
+    <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center space-y-3 mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-brand-ink text-brand-creme text-xs font-bold uppercase tracking-widest shadow-md">
+          <i class="fa-solid fa-bullhorn text-brand-gold animate-bounce"></i> Limited-Time Promotional Flash Offers
+        </div>
+        <h2 class="font-teko text-5xl sm:text-6xl text-brand-ink uppercase">Claim Your Exclusive Training Discount</h2>
+        <p class="text-brand-inkMuted text-sm max-w-xl mx-auto font-normal">
+          Lock in special concession rates supervised by Mr. India Jeet Das (<strong class="text-brand-ink">JD</strong>) and Suman before the flash countdown expires.
+        </p>
+      </div>
+
+      <!-- Live Interactive Offer Ticker / Running Script Banner -->
+      <div class="bg-brand-ink text-brand-creme rounded-2xl p-4 sm:p-5 mb-12 shadow-2xl border border-brand-gold/40 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-gold/20 border border-brand-gold text-brand-gold flex items-center justify-center shrink-0 animate-pulse">
+            <i class="fa-solid fa-bolt text-lg"></i>
+          </div>
+          <div>
+            <div class="text-[10px] text-brand-gold uppercase tracking-widest font-bold">Active Flash Banner Ticker</div>
+            <div id="runningAdText" class="text-xs sm:text-sm font-semibold text-white tracking-wide">
+              ⚡ LIVE DEAL: Use Code <span class="text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded">B2FNEW15</span> for 15% OFF Annual Memberships!
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <div class="text-right">
+            <span class="text-[9px] uppercase tracking-widest text-brand-inkLight block">Offer Ends In</span>
+            <span id="flashCountdown" class="font-teko text-2xl text-brand-gold font-bold">04 : 18 : 42 : 19</span>
+          </div>
+          <button onclick="rotatePromoNotice()" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" title="Cycle Offers">
+            <i class="fa-solid fa-rotate text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 Creative Interactive Offer Cards -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Offer Card 1: Buddy Train Pass -->
+        <div class="bg-brand-cremeCard border-2 border-brand-cremeBorder hover:border-brand-ink rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between transition group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-ink text-brand-creme text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl shadow">
+            Popular Combo
+          </div>
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-cremeDark border border-brand-cremeBorder flex items-center justify-center text-brand-ink text-xl group-hover:scale-110 transition-transform shadow-inner">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <div>
+              <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">Buddy Train Pass</h3>
+              <p class="text-xs text-brand-inkMuted mt-1">Train with a partner and split elite 1-on-1 personal coaching.</p>
+            </div>
+            <div class="p-3 bg-brand-creme rounded-xl border border-brand-cremeBorder flex items-center justify-between">
+              <div>
+                <span class="text-[9px] text-brand-inkMuted font-bold uppercase block">Promo Code</span>
+                <span class="font-mono font-bold text-xs text-brand-ink select-all">BUDDY20</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">Save 20%</span>
+            </div>
+            <ul class="text-xs text-brand-inkMuted space-y-2">
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Dual personalized macro sheets</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Shared 1-on-1 PT supervision</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Priority locker access</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-cremeBorder">
+            <a href="https://wa.me/919007586246?text=Hi%20Born2Fit,%20I%20want%20to%20redeem%20the%20Buddy%20Train%20Pass%20using%20promo%20code%20BUDDY20" target="_blank" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold uppercase tracking-wider py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 group/btn">
+              <i class="fa-brands fa-whatsapp text-sm group-hover/btn:scale-110 transition-transform"></i>
+              <span>Claim via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Offer Card 2: Student & Corporate Pro -->
+        <div class="bg-brand-cremeCard border-2 border-brand-gold/60 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col justify-between transition group relative overflow-hidden transform md:-translate-y-3">
+          <div class="absolute top-0 right-0 bg-brand-gold text-brand-ink text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl shadow">
+            Best Value Deal
+          </div>
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-ink text-xl group-hover:scale-110 transition-transform shadow-inner">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">Student & Corporate Pro</h3>
+              <p class="text-xs text-brand-inkMuted mt-1">Special concession rates for students and IT/corporate professionals in New Town.</p>
+            </div>
+            <div class="p-3 bg-brand-creme rounded-xl border border-brand-cremeBorder flex items-center justify-between">
+              <div>
+                <span class="text-[9px] text-brand-inkMuted font-bold uppercase block">Promo Code</span>
+                <span class="font-mono font-bold text-xs text-brand-ink select-all">B2FPRO25</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">₹1,000 OFF</span>
+            </div>
+            <ul class="text-xs text-brand-inkMuted space-y-2">
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Flexible evening & morning slots</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Full access to cardio & iron deck</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Bi-weekly progress audits</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-cremeBorder">
+            <a href="https://wa.me/919007586246?text=Hi%20Born2Fit,%20I%20want%20to%20redeem%20the%20Student%20and%20Corporate%20Pro%20offer%20using%20promo%20code%20B2FPRO25" target="_blank" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold uppercase tracking-wider py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 group/btn">
+              <i class="fa-brands fa-whatsapp text-sm group-hover/btn:scale-110 transition-transform"></i>
+              <span>Claim via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Offer Card 3: Free Mr. India Assessment -->
+        <div class="bg-brand-cremeCard border-2 border-brand-cremeBorder hover:border-brand-ink rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between transition group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-ink text-brand-creme text-[9px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl shadow">
+            Free Consultation
+          </div>
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-cremeDark border border-brand-cremeBorder flex items-center justify-center text-brand-ink text-xl group-hover:scale-110 transition-transform shadow-inner">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div>
+              <h3 class="font-teko text-4xl text-brand-ink uppercase leading-none">Mr. India Form Audit</h3>
+              <p class="text-xs text-brand-inkMuted mt-1">Get your posture, squat mechanics, and diet evaluated by Mr. India Jeet Das (<strong class="text-brand-ink">JD</strong>) for free.</p>
+            </div>
+            <div class="p-3 bg-brand-creme rounded-xl border border-brand-cremeBorder flex items-center justify-between">
+              <div>
+                <span class="text-[9px] text-brand-inkMuted font-bold uppercase block">Promo Code</span>
+                <span class="font-mono font-bold text-xs text-brand-ink select-all">JDFREEAUDIT</span>
+              </div>
+              <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">100% FREE</span>
+            </div>
+            <ul class="text-xs text-brand-inkMuted space-y-2">
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> 1-on-1 evaluation with Mr. India</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Custom calorie deficit blueprint</li>
+              <li><i class="fa-solid fa-check text-emerald-600 mr-1.5"></i> Zero obligation trial visit</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-cremeBorder">
+            <a href="https://wa.me/919007586246?text=Hi%20Mr.%20Jeet%20Das%20(JD),%20I%20would%20like%20to%20claim%20my%20free%20form%20audit%20using%20promo%20code%20JDFREEAUDIT" target="_blank" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold uppercase tracking-wider py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 group/btn">
+              <i class="fa-brands fa-whatsapp text-sm group-hover/btn:scale-110 transition-transform"></i>
+              <span>Claim Free Audit</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Coupon Redirection Box -->
+      <div class="mt-12 max-w-3xl mx-auto bg-brand-cremeCard border border-brand-cremeBorder rounded-2xl p-6 shadow-xl text-center space-y-4">
+        <h4 class="font-teko text-3xl text-brand-ink uppercase">Have a Custom Promo Code or Referral?</h4>
+        <p class="text-xs text-brand-inkMuted max-w-md mx-auto">Enter your discount code below to instantly pre-fill and send your voucher details directly to our New Town WhatsApp desk.</p>
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="text" id="customPromoInput" placeholder="e.g. B2FNEW15" class="flex-1 bg-brand-creme border border-brand-cremeBorder rounded-xl px-4 py-3 text-xs uppercase font-mono text-brand-ink focus:outline-none focus:border-brand-ink" />
+          <button onclick="applyCustomPromo()" class="bg-brand-ink hover:bg-black text-brand-creme font-bold uppercase text-xs tracking-widest px-6 py-3 rounded-xl transition shadow">
+            Redeem via WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Location & Enhanced WhatsApp Contact Section -->
   <section id="contact" class="py-24 border-b border-brand-cremeBorder">
     <div class="max-w-7xl mx-auto px-6">
@@ -1969,6 +2131,7 @@
             <option>1 Month Trial (₹1,199 + ₹499 Admission)</option>
             <option>Goal Timeline Transformation</option>
             <option>Gym Floor Access</option>
+            <option>Promo Offer Redemption</option>
           </select>
         </div>
         <!-- WhatsApp Branded Submission Button -->
@@ -2155,7 +2318,52 @@
       }
     }
 
-    // 7. Modal Management & WhatsApp Direct Redirection
+    // 7. Running Advertisement Script & Countdown Timer
+    const promoMessages = [
+      "⚡ LIVE DEAL: Use Code <span class='text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded'>B2FNEW15</span> for 15% OFF Annual Memberships!",
+      "🔥 BUDDY PASS: Train with a friend using code <span class='text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded'>BUDDY20</span> to save 20% on 1-on-1 PT!",
+      "👑 FREE AUDIT: Claim your complimentary form check & macro review with Mr. India Jeet Das using code <span class='text-brand-gold font-mono font-bold bg-white/10 px-1.5 py-0.5 rounded'>JDFREEAUDIT</span>!"
+    ];
+    let promoIndex = 0;
+
+    function rotatePromoNotice() {
+      promoIndex = (promoIndex + 1) % promoMessages.length;
+      const el = document.getElementById('runningAdText');
+      if (el) {
+        el.style.opacity = 0;
+        setTimeout(() => {
+          el.innerHTML = promoMessages[promoIndex];
+          el.style.opacity = 1;
+        }, 200);
+      }
+    }
+    // Auto-rotate every 6 seconds
+    setInterval(rotatePromoNotice, 6000);
+
+    // Countdown Timer simulation
+    let totalSeconds = (4 * 3600) + (18 * 60) + 42;
+    setInterval(() => {
+      if (totalSeconds > 0) totalSeconds--;
+      const hrs = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const secs = String(totalSeconds % 60).padStart(2, '0');
+      const timerEl = document.getElementById('flashCountdown');
+      if (timerEl) {
+        timerEl.innerText = `${hrs} : ${mins} : ${secs} : 19`;
+      }
+    }, 1000);
+
+    function applyCustomPromo() {
+      const code = document.getElementById('customPromoInput').value.trim();
+      if (!code) {
+        alert("Please enter a valid promo code.");
+        return;
+      }
+      const msg = `Hello Born2Fit! I would like to redeem promo code: *${encodeURIComponent(code)}* at your New Town branch. Please confirm my discount.`;
+      window.open(`https://wa.me/${GYM_WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+    }
+
+    // 8. Modal Management & WhatsApp Direct Redirection
     function openModal(plan) {
       document.getElementById('selectedPlan').value = plan;
       document.getElementById('modalTitle').innerText = plan ? plan : 'Enroll at Born2Fit';
@@ -2178,12 +2386,12 @@
       const interest = document.getElementById('modalUserInterest').value;
 
       const message = `Hello Born2Fit! I would like to enroll/inquire:%0A` +
-                      `• Name: ${encodeURIComponent(name)}%0A` +
-                      `• Phone: ${encodeURIComponent(phone)}%0A` +
-                      `• Interested In: ${encodeURIComponent(interest)}%0A` +
-                      `• Selected Plan/Topic: ${encodeURIComponent(plan)}%0A` +
-                      `• Head Coach: Mr. Jeet Das (JD)%0A` +
-                      `Please confirm trainer availability at New Town branch.`;
+                    `• Name: ${encodeURIComponent(name)}%0A` +
+                    `• Phone: ${encodeURIComponent(phone)}%0A` +
+                    `• Interested In: ${encodeURIComponent(interest)}%0A` +
+                    `• Selected Plan/Topic: ${encodeURIComponent(plan)}%0A` +
+                    `• Head Coach: Mr. Jeet Das (JD)%0A` +
+                    `Please confirm trainer availability at New Town branch.`;
 
       const whatsappUrl = `https://wa.me/${GYM_WHATSAPP_NUMBER}?text=${message}`;
       window.open(whatsappUrl, '_blank');
